@@ -8,16 +8,20 @@ const musicTracks = {
 
 const backgroundMusic = document.getElementById('background_music');
 const playButton = document.getElementById('playButton');
+let userInteracted = false;
 
 window.changeMusic = function (track) {
     backgroundMusic.src = track;
-    backgroundMusic.play();
+    if (userInteracted) {
+        backgroundMusic.play().catch(error => {
+            console.log('Playback failed:', error);
+        });
+    }
 }
 
 function initializeMusic() {
-    changeMusic(musicTracks['intro']);
-
     playButton.addEventListener('click', () => {
+        userInteracted = true;
         if (backgroundMusic.paused) {
             backgroundMusic.play().catch(error => {
                 console.log('Playback failed:', error);
@@ -32,3 +36,4 @@ function initializeMusic() {
 }
 
 initializeMusic();
+
