@@ -1,5 +1,6 @@
 section {
     display: none;
+    position: relative;
     background-color: transparent;
     color: #fff;
 }
@@ -16,7 +17,18 @@ main {
     min-height: calc(100vh - 36.48px - 38.57px);
 }
 
-.intro {
+section p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro,
+.about,
+.skills,
+.projects,
+.contact {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -25,4 +37,22 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
+}
+
+.about {
+    background-image: url("/images/about_bg.jpg");
+}
+
+.skills {
+    background-image: url("/images/skills_bg.webp");
+}
+
+.projects {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, .8)), url("/images/projects_bg.jpg");
+}
+
+.contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, .8)), url("/images/contact_bg.jpg");
 }
