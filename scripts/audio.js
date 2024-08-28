@@ -9,10 +9,19 @@ const musicTracks = {
 const backgroundMusic = document.getElementById('background_music');
 const playButton = document.getElementById('playButton');
 let userInteracted = false;
+let wasPlaying = false;
 
 window.changeMusic = function (track) {
+    if (!backgroundMusic.paused) {
+        wasPlaying = true;
+        backgroundMusic.pause();
+    } else {
+        wasPlaying = false;
+    }
+
     backgroundMusic.src = track;
-    if (userInteracted) {
+
+    if (userInteracted && wasPlaying) {
         backgroundMusic.play().catch(error => {
             console.log('Playback failed:', error);
         });
