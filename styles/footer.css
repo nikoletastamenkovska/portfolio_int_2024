@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    color: #D0A9A0;
+}
+
+#playButton {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    color: #D0A9A0;
+    transition: color 0.3s ease;
+}
+
+#playButton:hover {
+    color: #B07A70;
+}
+
+#playButton::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #B07A70;
+    transition: width 0.3s ease;
+}
+
+#playButton:hover::after {
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+section {
+    display: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+section:first-child {
+    display: block;
+}
+
+section:active {
+    display: block;
+}
+
+main {
+    min-height: calc(100vh - 36.48px - 38.57px);
+}
+
+.intro {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, .8)), url("/images/intro_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+}
