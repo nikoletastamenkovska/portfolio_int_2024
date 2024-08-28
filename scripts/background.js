@@ -1,27 +1,36 @@
-const musicTracks = {
-    intro: '/soundtracks/1.First_Step.m4a',
-    about: '/soundtracks/2.Cornfield_Chase.m4a',
-    skills: '/soundtracks/3.Tick_Tock.m4a',
-    projects: '/soundtracks/4.The_Wormhole.m4a',
-    contact: '/soundtracks/5.Murph.m4a',
+const sections = ['intro', 'about', 'skills', 'projects', 'contact'];
+let currentIndex = 0;
+
+function showSection(index) {
+    sections.forEach((sectionId, i) => {
+        document.getElementById(sectionId).style.display = i === index ? 'block' : 'none';
+    });
+
+    const currentSectionId = sections[index];
+    const track = musicTracks[currentSectionId];
+    changeMusic(track);
 }
 
-let currentSection = 'intro';
-let audio = document.getElementById('background_music');
+document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % sections.length;
+    showSection(currentIndex);
+});
 
-function playAudio() {
-    audio.src = musicTracks[currentSection];
-    audio.play();
-}
+document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+    showSection(currentIndex);
+});
 
-function switchSection(section) {
-    if (currentSection !== section) {
-        currentSection = section;
-        audio.src = musicTracks[currentSection];
-        audio.play();
-    }
-}
+document.querySelectorAll('.navigation a').forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute('href').substring(1);
+        const index = sections.indexOf(targetId);
+        if (index !== -1) {
+            currentIndex = index;
+            showSection(currentIndex);
+        }
+    });
+});
 
-document.getElementById('introductionLink').addEventListener('click', function () {
-    switchSection('intro');
-})
+showSection(currentIndex);

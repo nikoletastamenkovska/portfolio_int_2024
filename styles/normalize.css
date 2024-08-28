@@ -26,6 +26,10 @@ h2 {
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .button {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;

@@ -44,14 +44,16 @@ header a:hover::after {
 }
 
 nav {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
 }
 
 nav button {
