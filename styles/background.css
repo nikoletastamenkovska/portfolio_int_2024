@@ -37,6 +37,10 @@ section p {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about {

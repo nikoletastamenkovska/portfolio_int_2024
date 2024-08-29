@@ -1,0 +1,110 @@
+.binary {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.longitude {
+    top: 85vh;
+}
+
+.binary .item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 35%;
+}
+
+.binary .item {
+    cursor: pointer;
+    transition: .5s;
+    opacity: 0;
+    padding: .1rem;
+}
+
+.binary .item:hover {
+    opacity: .9;
+    transform: translateZ(100px);
+}
+
+.binary .item:hover+* {
+    opacity: .6;
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.binary .item:hover+*+* {
+    opacity: .3;
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+.binary .item:hover+*+*+* {
+    opacity: .1;
+    transform: translateZ(10px) rotateY(50deg);
+}
+
+.binary .item:has(+ *:hover) {
+    opacity: .6;
+    transform: translateZ(70px) rotate(-20deg);
+}
+
+.binary .item:has(+*+ *:hover) {
+    opacity: .3;
+    transform: translateZ(30px) rotate(-10deg);
+}
+
+.binary .item:has(+*+*+ *:hover) {
+    opacity: .1;
+    transform: translateZ(10px) rotate(-5deg);
+}
+
+/* @media (max-width: 1199px) {
+    .binary {
+        transform: perspective(700px);
+    }
+
+    .binary .item img {
+        width: 3vw;
+        height: 3vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .binary {
+        transform: perspective(600px);
+    }
+
+    .binary .item img {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .binary {
+        transform: perspective(500px);
+    }
+
+    .binary .item img {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+@media (max-width: 599px) {
+    .binary {
+        transform: perspective(400px);
+    }
+
+    .binary .item img {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .binary .item {
+        padding: .05rem;
+    }
+} */
