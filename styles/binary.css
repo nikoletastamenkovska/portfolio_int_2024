@@ -21,13 +21,13 @@
 
 .binary .item {
     cursor: pointer;
-    transition: .5s;
+    transition: .8s;
     opacity: 0;
     padding: .1rem;
 }
 
 .binary .item:hover {
-    opacity: .9;
+    opacity: 1;
     transform: translateZ(100px);
 }
 
@@ -37,12 +37,12 @@
 }
 
 .binary .item:hover+*+* {
-    opacity: .3;
+    opacity: .4;
     transform: translateZ(30px) rotateY(10deg);
 }
 
 .binary .item:hover+*+*+* {
-    opacity: .1;
+    opacity: .2;
     transform: translateZ(10px) rotateY(50deg);
 }
 
@@ -52,12 +52,12 @@
 }
 
 .binary .item:has(+*+ *:hover) {
-    opacity: .3;
+    opacity: .4;
     transform: translateZ(30px) rotate(-10deg);
 }
 
 .binary .item:has(+*+*+ *:hover) {
-    opacity: .1;
+    opacity: .2;
     transform: translateZ(10px) rotate(-5deg);
 }
 
