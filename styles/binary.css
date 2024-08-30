@@ -1,6 +1,5 @@
 .binary {
     position: absolute;
-    top: 10vh;
     left: 0;
     right: 0;
     display: flex;
@@ -9,19 +8,17 @@
     transform: perspective(1000px);
 }
 
+.latitude {
+    top: 10vh;
+}
+
 .longitude {
     top: 85vh;
 }
 
-.binary .item img {
-    width: 20px;
-    height: 20px;
-    border-radius: 35%;
-}
-
 .binary .item {
     cursor: pointer;
-    transition: .8s;
+    transition: .5s;
     opacity: 0;
     padding: .1rem;
 }
@@ -59,6 +56,12 @@
 .binary .item:has(+*+*+ *:hover) {
     opacity: .2;
     transform: translateZ(10px) rotate(-5deg);
+}
+
+.binary .item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 35%;
 }
 
 /* @media (max-width: 1199px) {

@@ -3,7 +3,7 @@ let currentIndex = 0;
 
 function showSection(index) {
     sections.forEach((sectionId, i) => {
-        document.getElementById(sectionId).style.display = i === index ? 'block' : 'none';
+        document.getElementById(sectionId).style.display = i === index ? 'flex' : 'none';
     });
 
     const currentSectionId = sections[index];
