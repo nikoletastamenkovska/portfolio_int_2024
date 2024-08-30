@@ -3,15 +3,21 @@ main {
 }
 
 section {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     background-color: transparent;
     color: #fff;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
-section:active {
+.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
     display: flex;
 }
 
@@ -28,7 +34,6 @@ section:active {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;

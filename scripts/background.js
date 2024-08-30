@@ -3,7 +3,12 @@ let currentIndex = 0;
 
 function showSection(index) {
     sections.forEach((sectionId, i) => {
-        document.getElementById(sectionId).style.display = i === index ? 'flex' : 'none';
+        const section = document.getElementById(sectionId);
+        if (i === index) {
+            section.classList.add('active');
+        } else {
+            section.classList.remove('active');
+        }
     });
 
     const currentSectionId = sections[index];
