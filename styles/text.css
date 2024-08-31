@@ -1,0 +1,4 @@
+.intro_heading span,
+.intro_description b {
+    color: var(--primary-color);
+}

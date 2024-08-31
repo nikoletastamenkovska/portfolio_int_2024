@@ -29,11 +29,11 @@ const lngBinary = decimalToBinary(lng);
 function generateBinaryImages(binaryString) {
     return binaryString.split('').map(char => {
         if (char === '0') {
-            return `<div class="item"><img src="/images/no/zero.jpg" alt="Zero"></div>`;
+            return `<div class="item"><img src="/images/no/zero_digital.jpeg" alt="Zero"></div>`;
         } else if (char === '1') {
-            return `<div class="item"><img src="/images/no/one.jpg" alt="One"></div>`;
+            return `<div class="item"><img src="/images/no/one_digital.png" alt="One"></div>`;
         } else {
-            return `<div class="item"><img src="/images/no/dot.jpg" alt="Dot"></div>`;
+            return `<div class="item"><img src="/images/no/dot_silver.jpg" alt="Dot"></div>`;
         }
     }).join('');
 }

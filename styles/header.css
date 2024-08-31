@@ -6,7 +6,7 @@ header {
     right: 0;
     padding: .5rem 1rem;
     background-color: transparent;
-    color: #D0A9A0;
+    color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +18,7 @@ header a {
 }
 
 header a:hover {
-    color: #B07A70;
+    color: var(--tertiary-color);
 }
 
 header a::after {
@@ -26,12 +26,18 @@ header a::after {
     display: block;
     height: 2px;
     width: 0;
-    background: #D0A9A0;
+    background: var(--tertiary-color);
     transition: width 0.3s ease;
 }
 
 header a:hover::after {
     width: 100%;
+}
+
+.logo {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--tertiary-color);
 }
 
 .navigation ul {
@@ -63,10 +69,10 @@ nav button {
     font-family: inherit;
     cursor: pointer;
     outline: none;
-    color: #D0A9A0;
+    color: var(--tertiary-color);
     transition: color 0.3s ease;
 }
 
 nav button:hover {
-    color: #B07A70;
+    color: var(--background-color);
 }

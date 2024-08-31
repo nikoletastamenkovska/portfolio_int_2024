@@ -5,7 +5,8 @@ body {
     font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
-    background: black;
+    overflow-y: hidden;
+    background: var(--background-color);
 }
 
 html {
@@ -33,7 +34,7 @@ h2 {
 }
 
 p {
-    max-width: 40ch;
+    max-width: 33ch;
 }
 
 .button {

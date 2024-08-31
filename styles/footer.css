@@ -8,7 +8,7 @@ footer {
     right: 0;
     padding: .5rem 1rem;
     background-color: transparent;
-    color: #D0A9A0;
+    color: var(--primary-color);
 }
 
 #playButton {
@@ -17,12 +17,12 @@ footer {
     font-family: inherit;
     cursor: pointer;
     outline: none;
-    color: #D0A9A0;
+    color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
 #playButton:hover {
-    color: #B07A70;
+    color: var(--tertiary-color);
 }
 
 #playButton::after {
@@ -30,7 +30,7 @@ footer {
     display: block;
     height: 2px;
     width: 0;
-    background: #B07A70;
+    background: var(--tertiary-color);
     transition: width 0.3s ease;
 }
 
