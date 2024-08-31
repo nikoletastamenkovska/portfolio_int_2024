@@ -1,4 +1,24 @@
-.intro_heading span,
-.intro_description b {
+.emphasized {
     color: var(--primary-color);
+    font-weight: 900;
+}
+
+.intro_heading span,
+.intro_description span {
+    opacity: 0;
+    animation: reveal_word 2s ease-in-out forwards;
+    animation-delay: calc(var(--delay) * .5s);
+    transform-origin: top center;
+}
+
+@keyframes reveal_word {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
