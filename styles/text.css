@@ -28,7 +28,8 @@
     }
 }
 
-/* about_section text */
+/* ********************************************* */
+/* about_section */
 .about {
     color: var(--tertiary-color);
 }
@@ -66,9 +67,7 @@
 }
 
 
-
 /* wrapper styles */
-
 .wrapper {
     position: absolute;
     top: 10%;
@@ -112,4 +111,88 @@
         transform: translateY(100vh);
         opacity: 0;
     }
+}
+
+/* ********************************************* */
+/* skills section */
+.skills_wrapper {
+    position: absolute;
+    bottom: 55.71px;
+    right: 80px;
+    color: var(--tertiary-color);
+}
+
+.skills_wrapper ul {
+    width: 40ch;
+}
+
+/* wrapper_reverse */
+.wrapper_reverse {
+    position: absolute;
+    top: 10%;
+    right: 45%;
+    width: 80vw;
+    height: calc(100vh - 43.6px - 35.71px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+}
+
+.wrapper_reverse span {
+    display: block;
+    margin: 10px 0;
+    color: var(--primary-color);
+    opacity: 0;
+    position: absolute;
+    animation: scrollAndFade 20s linear infinite;
+}
+
+
+@keyframes scrollAndFade {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .6;
+    }
+
+    75% {
+        opacity: 8;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* check this! */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.word_animate {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+    transition: opacity 1s ease-out, transform 1.5s ease-out;
+}
+
+.fade_in_slide {
+    opacity: 1;
+    animation: fadeSlide 1s ease-out forwards;
 }

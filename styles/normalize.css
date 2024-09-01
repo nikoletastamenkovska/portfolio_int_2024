@@ -30,7 +30,11 @@ section {
 h1,
 h2 {
     font-family: 'Satisfy', cursive;
-    text-align: center;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 
 
