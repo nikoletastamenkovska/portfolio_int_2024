@@ -45,9 +45,29 @@
     color: var(--tertiary-color);
 }
 
+.about.active .about_wrapper p span {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: var(--animation-delay, 0s);
+}
+
 
 /* about_wrapper animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* wrapper styles */
 
 .wrapper {
     position: absolute;
