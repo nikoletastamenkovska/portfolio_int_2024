@@ -4,4 +4,5 @@ document.addEventListener("DOMContentLoaded", function () {
     list.forEach((span, idx) => {
         span.style.setProperty('--delay', idx + 1);
     });
-})
+});
+

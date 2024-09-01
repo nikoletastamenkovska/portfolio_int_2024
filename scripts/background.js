@@ -33,6 +33,8 @@ document.querySelectorAll('.navigation a').forEach(link => {
         const index = sections.indexOf(targetId);
         if (index !== -1) {
             currentIndex = index;
+            // add active class to link
+            // currentIndex.classList.add('active_link');
             showSection(currentIndex);
         }
     });

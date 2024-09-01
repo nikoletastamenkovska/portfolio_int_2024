@@ -1,5 +1,5 @@
 main {
-    min-height: calc(100vh - 36.48px - 38.57px);
+    min-height: calc(100vh - 43.6px - 35.71px);
 }
 
 section {
@@ -10,7 +10,7 @@ section {
     align-items: center;
     position: absolute;
     background-color: transparent;
-    color: #fff;
+    color: var(--tertiary-color);
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 

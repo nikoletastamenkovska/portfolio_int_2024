@@ -9,6 +9,7 @@ footer {
     padding: .5rem 1rem;
     background-color: transparent;
     color: var(--primary-color);
+    z-index: 1000;
 }
 
 #playButton {
