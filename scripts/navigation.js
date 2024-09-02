@@ -1,4 +1,4 @@
-const sections = ['intro', 'about', 'skills', 'projects', 'contact'];
+const sections = ['intro', 'about', 'projects', 'contact'];
 let currentIndex = 0;
 
 function showSection(index) {

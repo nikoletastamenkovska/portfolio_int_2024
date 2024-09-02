@@ -68,7 +68,7 @@
 
 
 /* wrapper styles */
-.wrapper {
+.about .wrapper {
     position: absolute;
     top: 10%;
     right: 0;
@@ -83,7 +83,7 @@
     white-space: nowrap;
 }
 
-.wrapper span {
+.about .wrapper span {
     display: block;
     margin: 10px 0;
     color: var(--tertiary-color);
@@ -119,11 +119,15 @@
     position: absolute;
     bottom: 55.71px;
     right: 80px;
-    color: var(--tertiary-color);
+    background: linear-gradient(right, var(--primary-color), var(--tertiary-color));
+    background-clip: text;
+    color: transparent;
+    /* color: var(--tertiary-color); */
 }
 
 .skills_wrapper ul {
     width: 40ch;
+
 }
 
 /* wrapper_reverse */
@@ -145,14 +149,14 @@
 .wrapper_reverse span {
     display: block;
     margin: 10px 0;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     opacity: 0;
     position: absolute;
-    animation: scrollAndFade 20s linear infinite;
+    animation: scrollAndFadeReverse 20s linear infinite;
 }
 
 
-@keyframes scrollAndFade {
+@keyframes scrollAndFadeReverse {
     0% {
         transform: translateY(100vh);
         opacity: 0;

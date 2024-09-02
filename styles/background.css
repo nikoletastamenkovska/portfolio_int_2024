@@ -1,58 +1,55 @@
+/* Main container */
 main {
     min-height: calc(100vh - 43.6px - 35.71px);
 }
 
+/* Section styles */
 section {
-    opacity: 0;
-    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     background-color: transparent;
     color: var(--tertiary-color);
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
+/* Active section */
 .active {
+    display: flex;
     opacity: 1;
     visibility: visible;
     position: relative;
-    display: flex;
 }
 
+/* Section-specific background styles */
 .intro,
 .about,
-.skills,
 .projects,
 .contact {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, .8)), url("/images/intro_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: hard-light;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/intro_bg.jpg");
 }
 
+/* Specific section backgrounds */
 .about {
-    background-image: url("/images/about_bg.jpg");
-}
-
-.skills {
-    background-image: url("/images/skills_bg.webp");
+    background-image: url("/images/about_bg.webp");
 }
 
 .projects {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, .8)), url("/images/projects_bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/projects_bg.jpg");
 }
 
 .contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, .8)), url("/images/contact_bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/contact_bg.jpg");
 }
