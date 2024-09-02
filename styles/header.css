@@ -60,7 +60,7 @@ nav {
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    z-index: 9999;
+    z-index: 8;
 }
 
 nav button {

@@ -38,6 +38,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
+    background-position: bottom center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/intro_bg.jpg");
 }
 
@@ -51,5 +52,6 @@ section {
 }
 
 .contact {
+    background-position: top center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/contact_bg.jpg");
 }

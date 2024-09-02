@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio_int</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Halant&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8580703571.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.css">
@@ -18,7 +16,6 @@
                 <ul>
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <!-- <li><a href="#skills">Skills</a></li> -->
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -40,17 +37,6 @@
         </section>
 
         <section class="about" id="about">
-            <!-- <div class="about_wrapper">
-                <p>
-                    <span>A </span><span>junior </span><span>web </span><span>developer </span><span>with <span>a focus on </span><span class="emphasized">JavaScript, </span><span class="emphasized">React.js </span><span>and </span><span class="emphasized">Next.js</span>. 
-                </p>
-                <p>
-                    <span>With </span><span>two </span><span>years </span><span>of </span><span>experience, </span><span>I'm </span><span>fascinated </span><span>by </span><span>the </span><span>rapid </span><span>advancements in </span><span class="emphasized">tech </span><span>and enjoy </span><span>blending </span><span class="emphasized">creativity </span><span>with </span><span class="emphasized">coding</span>.
-                </p>
-                <p>
-                    <span>I'm </span><span>keen on </span><span>exploring </span><span class="emphasized">AI </span><span>and </span><span class="emphasized">computer science, </span><span>and </span><span>I'm </span><span>always </span><span>excited </span><span>to tackle </span><span>new </span><span class="emphasized">challenges </span><span>and make an </span><span class="emphasized">impact </span><span>with my </span><span class="emphasized">work</span>.
-                </p>
-            </div> -->
             <div class="wrapper">
                 <span>Biochemistry</span>
                 <span>Code</span>
@@ -73,18 +59,6 @@
                 <span>Ghibli</span>
                 <span>Winter</span>
             </div>
-            <!-- <div class="skills_wrapper">
-                <h1>The things I learned so far:</h1>
-                <ul>
-                    <li class="animate_list_item">HTML / CSS / SASS: Proficient in building and styling responsive web pages.</li>
-                    <li class="animate_list_item">Bootstrap / MUI: Experienced in using Bootstrap and Material-UI for modern, consistent UI components.</li>
-                    <li class="animate_list_item">Git: Skilled in version control, with experience in collaborative development.</li>
-                    <li class="animate_list_item">JavaScript / TypeScript: Strong understanding of JavaScript, with expertise in TypeScript for type-safe development.</li>
-                    <li class="animate_list_item">ReactJS / NextJS: Advanced knowledge in building dynamic web applications with ReactJS and server-side rendering with NextJS.</li>
-                    <li class="animate_list_item">AJAX: Proficient in asynchronous web requests and data handling.</li>
-                    <li class="animate_list_item">Scrum: Familiar with Agile methodologies, particularly Scrum, for efficient project management.</li>
-                </ul>
-            </div> -->
             <div class="wrapper_reverse">
                 <span>Agile</span>
                 <span>Scrum</span>
@@ -105,8 +79,32 @@
                 <span>Languages</span>
                 <span>ReactJS</span>
                 <span>UX/UI</span>
-                <span>GSAP</span>
+                <span>AXIOS</span>
             </div>
+            <button id="about_modal_open_button">More about me...</button>
+            <div id="about_modal" class="about_modal">
+                <div class="modal_content">
+                    <div class="close_wrapper">
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="expose_wrapper">
+                        <div>
+                            Passionate about <span>ReactJS</span> and skilled in navigating any <span>JavaScript framework</span>. Daily experimentation with <span>CSS</span> and <span>libraries</span> leads to seamless integration of new tools into projects. Enjoy working in <span>collaborative environments</span> where ideas are <span>shared and valued</span>.
+                        </div>
+                        <hr>
+                        <div>
+                            Tech Stack: <br>
+                            HTML • CSS  • Bootstrap • SASS • MUI • JavaScript • jQuery • Ajax • TypeScript • ReactJS • NextJS • Git • ThreeJS • GSAP • UX/UI • Agile • Scrum • CS50
+                        </div>
+                        <hr>
+                        <div>
+                            Soft Skills: <br>
+                            Collaboration • Communication • Curiosity • Creativity • Agile • Adaptability • Attention to details
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
         <section class="projects" id="projects">
@@ -123,6 +121,7 @@
         <audio id="background_music" loop></audio>
     </footer>
 
+    <script src="/scripts/modal.js"></script>
     <script src="/scripts/audio.js"></script>
     <script src="/scripts/random_position.js"></script>
     <script src="/scripts/binary.js"></script>

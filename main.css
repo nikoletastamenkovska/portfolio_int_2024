@@ -5,6 +5,7 @@
 @import "/styles/header.css";
 @import "/styles/binary.css";
 @import "/styles/footer.css";
+@import "/styles/modal.css";
 
 :root {
     --background-color: #0b0c10;
