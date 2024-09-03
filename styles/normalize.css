@@ -61,3 +61,33 @@ ul {
     list-style: none;
     font-size: .8rem;
 }
+
+@media (max-width: 600px) {
+
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li,
+    a,
+    button,
+    section {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li,
+    a,
+    button,
+    section {
+        font-size: 2rem;
+    }
+}
