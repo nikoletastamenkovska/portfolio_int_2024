@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Street Artist",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/street_artist/street_artist_01.png",
+        "/images/project_img/street_artist/street_artist_02.png",
+        "/images/project_img/street_artist/street_artist_03.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 2,
+      "title": "Infinity Travel",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/street_artist/street_artist_01.png",
+        "/images/street_artist/street_artist_02.png",
+        "/images/street_artist/street_artist_03.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example",
+      "deployed": "https://infinity-travel-deployment-7oi4n7znm.vercel.app/"
+    },
+    {
+      "id": 3,
+      "title": "Weather App",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/weather_app/weather_app_01.png",
+        "/images/project_img/weather_app/weather_app_02.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 4,
+      "title": "Breathe App",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/breathe.mk/breathe_mk_01.png",
+        "/images/project_img/breathe.mk/breathe_mk_02.png",
+        "/images/project_img/breathe.mk/breathe_mk_03.png",
+        "/images/project_img/breathe.mk/breathe_mk_04.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 5,
+      "title": "Street Artist",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/street_artist/street_artist_01.png",
+        "/images/project_img/street_artist/street_artist_02.png",
+        "/images/project_img/street_artist/street_artist_03.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 6,
+      "title": "Infinity Travel",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/street_artist/street_artist_01.png",
+        "/images/street_artist/street_artist_02.png",
+        "/images/street_artist/street_artist_03.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example",
+      "deployed": "https://infinity-travel-deployment-7oi4n7znm.vercel.app/"
+    },
+    {
+      "id": 7,
+      "title": "Weather App",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/weather_app/weather_app_01.png",
+        "/images/project_img/weather_app/weather_app_02.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 8,
+      "title": "Breathe App",
+      "description": "Street artist is a SPA project where you as customer can find art pieces for buying. Also, if you are an artist, you can create your own gallery and keep track of your finances.",
+      "images": [
+        "/images/project_img/breathe.mk/breathe_mk_01.png",
+        "/images/project_img/breathe.mk/breathe_mk_02.png",
+        "/images/project_img/breathe.mk/breathe_mk_03.png",
+        "/images/project_img/breathe.mk/breathe_mk_04.png"
+      ],
+      "details": "Utilised Vanilla JavaScript",
+      "link": "https://github.com/nikoletastamenkovska/street_artists_2023/tree/main",
+      "video": "https://www.youtube.com/watch?v=example"
+    }
+  ]
+}
