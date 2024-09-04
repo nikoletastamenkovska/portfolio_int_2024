@@ -10,10 +10,12 @@
 
 .latitude {
     top: 10vh;
+    top: 10dvh;
 }
 
 .longitude {
     top: 85vh;
+    top: 85dvh;
 }
 
 .binary .item {
@@ -63,51 +65,3 @@
     height: 20px;
     border-radius: 35%;
 }
-
-/* @media (max-width: 1199px) {
-    .binary {
-        transform: perspective(700px);
-    }
-
-    .binary .item img {
-        width: 3vw;
-        height: 3vw;
-    }
-}
-
-@media (max-width: 991px) {
-    .binary {
-        transform: perspective(600px);
-    }
-
-    .binary .item img {
-        width: 4vw;
-        height: 4vw;
-    }
-}
-
-@media (max-width: 767px) {
-    .binary {
-        transform: perspective(500px);
-    }
-
-    .binary .item img {
-        width: 5vw;
-        height: 5vw;
-    }
-}
-
-@media (max-width: 599px) {
-    .binary {
-        transform: perspective(400px);
-    }
-
-    .binary .item img {
-        width: 6vw;
-        height: 6vw;
-    }
-
-    .binary .item {
-        padding: .05rem;
-    }
-} */

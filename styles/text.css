@@ -74,6 +74,7 @@
     right: 0;
     width: 25vw;
     height: calc(100vh - 43.6px - 35.71px);
+    height: calc(100dvh - 43.6px - 35.71px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -96,6 +97,7 @@
 @keyframes scrollAndFade {
     0% {
         transform: translateY(-100vh);
+        transform: translateY(-100dvh);
         opacity: 0;
     }
 
@@ -109,6 +111,7 @@
 
     100% {
         transform: translateY(100vh);
+        transform: translateY(100dvh);
         opacity: 0;
     }
 }
@@ -137,6 +140,7 @@
     right: 45%;
     width: 80vw;
     height: calc(100vh - 43.6px - 35.71px);
+    height: calc(100dvh - 43.6px - 35.71px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -159,6 +163,7 @@
 @keyframes scrollAndFadeReverse {
     0% {
         transform: translateY(100vh);
+        transform: translateY(100dvh);
         opacity: 0;
     }
 
@@ -172,6 +177,7 @@
 
     100% {
         transform: translateY(-100vh);
+        transform: translateY(-100dvh);
         opacity: 0;
     }
 }

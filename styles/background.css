@@ -1,6 +1,7 @@
 /* Main container */
 main {
     min-height: calc(100vh - 43.6px - 35.71px);
+    min-height: calc(100dvh - 43.6px - 35.71px);
 }
 
 /* Section styles */
@@ -31,6 +32,7 @@ section {
 .contact {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -49,6 +51,16 @@ section {
 
 .projects {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/projects_bg.jpg");
+}
+
+.projects h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline;
 }
 
 .contact {
