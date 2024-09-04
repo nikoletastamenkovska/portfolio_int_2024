@@ -1,0 +1,62 @@
+.scroller {
+    --_spacer: 1rem;
+    max-width: 90%;
+    z-index: 11;
+}
+
+.scroller_inner {
+    padding-block: var(--_spacer);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_spacer);
+    transition: animation-play-state 0.5s ease;
+}
+
+.project_card {
+    --_blur: 10px;
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+    background-color: rgba(58, 46, 34, 0.8);
+    backdrop-filter: blur(var(--_blur));
+    -webkit-backdrop-filter: blur(var(--_blur));
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 4px 6px (0, 0, 0, .8);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* if animation allowed */
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            #ffffff 20%,
+            #ffffff 80%,
+            #ffffff 20%);
+    mask: linear-gradient(90deg, rgba(255, 255, 255, .7), #ffffff);
+}
+
+.scroller[data-animated="true"] .scroller_inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 50s linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller_inner:hover {
+    animation-play-state: paused;
+}
+
+.project_card:hover {
+    cursor: pointer;
+    transform: scale(1.09);
+    border: 1px solid var(--tertiary-color);
+
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}

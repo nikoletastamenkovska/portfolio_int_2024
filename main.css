@@ -6,6 +6,7 @@
 @import "/styles/binary.css";
 @import "/styles/footer.css";
 @import "/styles/modal.css";
+@import "/styles/card.css";
 
 :root {
     --background-color: #0b0c10;
