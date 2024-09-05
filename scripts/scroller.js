@@ -7,5 +7,17 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 function addAnimation() {
     scrollers.forEach(scroller => {
         scroller.setAttribute("data-animated", true);
+
+        const scrollerInner = document.querySelector('.scroller_inner');
+        let scrollTimeout;
+
+        scroller.addEventListener('scroll', () => {
+            scrollerInner.style.animationPlayState = 'paused';
+            clearTimeout(scrollTimeout);
+
+            scrollTimeout = setTimeout(() => {
+                scrollerInner.style.animationPlayState = 'running';
+            }, 3000)
+        });
     });
 }

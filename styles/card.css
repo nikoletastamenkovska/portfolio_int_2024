@@ -1,11 +1,14 @@
 .scroller {
     --_spacer: 1rem;
     max-width: 90%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     z-index: 11;
 }
 
 .scroller_inner {
     padding-block: var(--_spacer);
+    width: max-content;
     display: flex;
     flex-wrap: wrap;
     gap: var(--_spacer);
@@ -14,6 +17,7 @@
 
 .project_card {
     --_blur: 10px;
+    position: relative;
     width: 180px;
     height: 260px;
     display: grid;
@@ -33,23 +37,128 @@
 }
 
 .cover {
-    width: 100%;
-    height: 100%;
+    display: block;
+    opacity: 1;
 }
 
-.card_inner {
+.card_inner,
+.see_more_btn {
     display: none;
 }
 
-.cover img {
+.card_inner {
+    position: relative;
+    opacity: 0;
+}
+
+.cover,
+.card_inner {
     width: 100%;
     height: 100%;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.cover {
+    background-size: cover;
+    background-position: center;
 }
 
 .project_card:hover {
-    cursor: pointer;
     box-shadow: 0 4px 6px (0, 0, 0, .8);
     transform: scale(1.09);
+}
+
+.project_card:hover .see_more_btn {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - (2* var(--_spacer)));
+    padding: 10px 20px;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+    border: none;
+    color: var(--primary-color);
+    text-decoration: overline;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    cursor: pointer;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.project_card.active .cover {
+    display: none;
+    opacity: 0;
+}
+
+.project_card.active .card_inner {
+    max-width: 100%;
+    max-height: fit-content;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: .5rem;
+    text-align: justify;
+    padding-inline: .5rem;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+}
+
+.close_see_more_btn {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    cursor: pointer;
+}
+
+.see_images_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+    border: none;
+    color: var(--primary-color);
+    text-decoration: overline;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    cursor: pointer;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.card_title {
+    position: absolute;
+    top: 10%;
+}
+
+.card_links {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: .5rem;
+    align-items: center;
+    background-color: rgba(11, 12, 16, .7);
+    border: none;
+}
+
+.card_links a {
+    font-size: .5rem;
+    font-family: 'Satisfy', cursive;
+    color: var(--primary-color);
+    text-decoration: overline;
 }
 
 /* if animation allowed */
@@ -72,7 +181,6 @@
 .scroller[data-animated="true"] .scroller_inner:hover {
     animation-play-state: paused;
 }
-
 
 @keyframes scroll {
     to {
