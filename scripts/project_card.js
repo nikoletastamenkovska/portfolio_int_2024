@@ -33,6 +33,13 @@ window.createProjectCard = function (projects) {
         const imageContainer = document.createElement('div');
         imageContainer.classList.add('.image_container');
 
+        const closeProjectImagesBtn = document.createElement('btn');
+        closeProjectImagesBtn.classList.add('close_see_more_btn');
+        closeProjectImagesBtn.innerHTML = `<span class="close">&times;</span>`;
+
+        imageContainer.appendChild(closeProjectImagesBtn);
+
+
         // Create the carousel images
         project.images.forEach((image, index) => {
             const img = document.createElement('img');
@@ -40,8 +47,6 @@ window.createProjectCard = function (projects) {
             image.alt = `Project image ${index + 1}`;
             img.classList.add('carousel_image');
             imageContainer.appendChild(img);
-            console.log(img);
-
         });
 
         const seeMoreBtn = document.createElement('btn');
@@ -50,7 +55,7 @@ window.createProjectCard = function (projects) {
 
         const closeSeeMoreBtn = document.createElement('btn');
         closeSeeMoreBtn.classList.add('close_see_more_btn');
-        closeSeeMoreBtn.innerHTML = `<span class="close">&times;</span>`
+        closeSeeMoreBtn.innerHTML = `<span class="close">&times;</span>`;
 
         cardInner.append(imageContainer, projectImagesBtn);
         cardInner.appendChild(closeSeeMoreBtn);
@@ -67,13 +72,22 @@ window.createProjectCard = function (projects) {
 
         // card.addEventListener("mouseleave", () => {
         //     card.classList.remove("active");
-        seeMoreBtn.style.display = "block";
-
+        // seeMoreBtn.style.display = "block";
         // });
 
         closeSeeMoreBtn.addEventListener('click', () => {
             card.classList.remove('active');
             seeMoreBtn.style.display = "block";
+        });
+
+        closeProjectImagesBtn.addEventListener('click', () => {
+            Array.from(cardInner.children).forEach(child => {
+                if (child != imageContainer) {
+                    child.style.display = "flex";
+                }
+            });
+            imageContainer.style.display = "none";
+            projectImagesBtn.style.display = "block";
         });
 
         projectImagesBtn.addEventListener('click', () => {
@@ -83,7 +97,6 @@ window.createProjectCard = function (projects) {
                 }
             });
             imageContainer.style.display = "block";
-
-        })
+        });
     });
 }
