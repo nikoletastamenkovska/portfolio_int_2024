@@ -2,6 +2,19 @@
   "projects": [
     {
       "id": 1,
+      "title": "Restaurant Finder",
+      "description": "Discover top restaurants based on your preferences with this app. Easily filter by cuisine, view restaurant details, and save your favorites for quick access. Ideal for finding the best dining options tailored to your taste.",
+      "tech": ["HTML", "CSS", "ReactJS"],
+      "images": [
+        "/images/project_img/restaurant_app/restaurant_01.png",
+        "/images/project_img/restaurant_app/restaurant_02.png",
+        "/images/project_img/restaurant_app/restaurant_03.png"
+      ],
+      "link": "https://gitlab.com/stamenkovska-nikoleta/brainsterchallenges_nikoletastamenkovskastojmirovskafe9/-/tree/Challenge_18_React-4_Restaurant-app?ref_type=heads",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 2,
       "title": "Street Artist",
       "description": "SPA project where you as customer can find art pieces for buying. Also, this is a web space for every street artist, that will allow them to be able to track theit income, and to have a place on the web where they can showcase their masterpieces",
       "tech": ["HTML", "CSS", "JavaScript"],
@@ -14,7 +27,7 @@
       "video": "https://www.youtube.com/watch?v=example"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Infinity Travel",
       "description": "A dynamic platform for a tourism agency that allows users to explore and book travel packages and effortlessly. Users can browse destinations with ease, view stunning visuals, and access detailed trip information, all within an interactive and visually engaging interface.",
       "tech": ["Bootstrap", "Typescript", "NextJS"],
@@ -27,18 +40,6 @@
       "gitlab": "https://gitlab.com/stamenkovska-nikoleta/brainsterprojects_nikoletastamenkovskastojmirovskafe9/-/tree/project03/infinity_travel/src?ref_type=heads",
       "video": "https://www.youtube.com/watch?v=example",
       "deployed": "https://infinity-travel-deployment-7oi4n7znm.vercel.app/"
-    },
-    {
-      "id": 3,
-      "title": "Weather App",
-      "description": "App for practicing: replicated a weather application, experimenting with free weather APIs and integrating them into the project.",
-      "tech": ["HTML", "CSS", "ReactJs"],
-      "images": [
-        "/images/project_img/weather_app/weather_app_01.png",
-        "/images/project_img/weather_app/weather_app_02.png"
-      ],
-      "github": "https://github.com/nikoletastamenkovska/weather_app.git",
-      "video": "https://www.youtube.com/watch?v=example"
     },
     {
       "id": 4,
@@ -69,17 +70,15 @@
     },
     {
       "id": 6,
-      "title": "Restaurant Finder App",
-      "description": "Discover top restaurants based on your preferences with this app. Easily filter by cuisine, view restaurant details, and save your favorites for quick access. Ideal for finding the best dining options tailored to your taste.",
-      "tech": ["HTML", "CSS", "ReactJS"],
+      "title": "Weather App",
+      "description": "App for practicing: replicated a weather application, experimenting with free weather APIs and integrating them into the project.",
+      "tech": ["HTML", "CSS", "ReactJs"],
       "images": [
-        "/images/project_img/restaurant_app/restaurant_01.png",
-        "/images/project_img/restaurant_app/restaurant_02.png",
-        "/images/project_img/restaurant_app/restaurant_03.png"
+        "/images/project_img/weather_app/weather_app_01.png",
+        "/images/project_img/weather_app/weather_app_02.png"
       ],
-      "link": "https://gitlab.com/stamenkovska-nikoleta/brainsterchallenges_nikoletastamenkovskastojmirovskafe9/-/tree/Challenge_18_React-4_Restaurant-app?ref_type=heads",
-      "video": "https://www.youtube.com/watch?v=example",
-      "deployed": "https://infinity-travel-deployment-7oi4n7znm.vercel.app/"
+      "github": "https://github.com/nikoletastamenkovska/weather_app.git",
+      "video": "https://www.youtube.com/watch?v=example"
     }
   ]
 }

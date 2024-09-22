@@ -28,28 +28,51 @@ window.createProjectCard = function (projects) {
             </div>
         `;
 
-        // the image carousel
-        // the container
-        const imageContainer = document.createElement('div');
-        imageContainer.classList.add('.image_container');
+        // the carousel
+        const carousel = document.createElement('div');
+        carousel.id = 'carousel';
+        carousel.style.display = 'none';
+
+        const carouselNavigation = document.createElement('div');
+        carouselNavigation.id = 'carousel_nav';
 
         const closeProjectImagesBtn = document.createElement('btn');
-        closeProjectImagesBtn.classList.add('close_see_more_btn');
+        closeProjectImagesBtn.classList.add('close_project_img_btn');
         closeProjectImagesBtn.innerHTML = `<span class="close">&times;</span>`;
 
-        imageContainer.appendChild(closeProjectImagesBtn);
+        carousel.append(closeProjectImagesBtn, carouselNavigation);
 
 
         // Create the carousel images
         project.images.forEach((image, index) => {
             const img = document.createElement('img');
             img.src = image;
-            image.alt = `Project image ${index + 1}`;
+            img.alt = `Project image ${index + 1}`;
             img.classList.add('carousel_image');
-            imageContainer.appendChild(img);
+
+            // create dot el
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+
+            if (index === 0) {
+                img.classList.add('active');
+                dot.classList.add('active');
+            }
+            carousel.appendChild(img);
+
+            dot.addEventListener('click', () => {
+                // Remove 'active' from all images and dots
+                document.querySelectorAll('.carousel_image').forEach(img => img.classList.remove('active'));
+                document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+
+                // Add 'active' to the clicked dot and its corresponding image
+                img.classList.add('active');
+                dot.classList.add('active');
+            });
+            carouselNavigation.appendChild(dot);
         });
 
-        const seeMoreBtn = document.createElement('btn');
+        const seeMoreBtn = document.createElement('button');
         seeMoreBtn.classList.add('see_more_btn');
         seeMoreBtn.innerHTML = "See more";
 
@@ -57,23 +80,27 @@ window.createProjectCard = function (projects) {
         closeSeeMoreBtn.classList.add('close_see_more_btn');
         closeSeeMoreBtn.innerHTML = `<span class="close">&times;</span>`;
 
-        cardInner.append(imageContainer, projectImagesBtn);
-        cardInner.appendChild(closeSeeMoreBtn);
+        cardInner.append(projectImagesBtn, closeSeeMoreBtn);
         cover.appendChild(seeMoreBtn);
-        card.append(cover, cardInner);
+        card.append(cover, cardInner, carousel);
         container.appendChild(card);
 
-        imageContainer.style.display = 'none';
 
         seeMoreBtn.addEventListener('click', () => {
             card.classList.add('active');
             seeMoreBtn.style.display = "none";
         });
 
-        // card.addEventListener("mouseleave", () => {
-        //     card.classList.remove("active");
-        // seeMoreBtn.style.display = "block";
-        // });
+        card.addEventListener("mouseover", () => {
+            cover.classList.add("active");
+            seeMoreBtn.style.display = "block";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.classList.remove("active");
+            cover.classList.add("active");
+            seeMoreBtn.style.display = "none";
+        });
 
         closeSeeMoreBtn.addEventListener('click', () => {
             card.classList.remove('active');
@@ -82,21 +109,21 @@ window.createProjectCard = function (projects) {
 
         closeProjectImagesBtn.addEventListener('click', () => {
             Array.from(cardInner.children).forEach(child => {
-                if (child != imageContainer) {
+                if (child != carousel) {
                     child.style.display = "flex";
                 }
             });
-            imageContainer.style.display = "none";
+            carousel.style.display = "none";
             projectImagesBtn.style.display = "block";
         });
 
         projectImagesBtn.addEventListener('click', () => {
             Array.from(cardInner.children).forEach(child => {
-                if (child != imageContainer) {
+                if (child != carousel) {
                     child.style.display = "none";
                 }
             });
-            imageContainer.style.display = "block";
+            carousel.style.display = "flex";
         });
     });
 }

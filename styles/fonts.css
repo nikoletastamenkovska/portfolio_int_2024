@@ -1,3 +1,14 @@
+body {
+    font-family: 'Halant', serif;
+}
+
+h1,
+h2,
+h3,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .intro_heading {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;

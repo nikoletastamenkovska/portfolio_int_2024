@@ -17,9 +17,10 @@
 
 .project_card {
     --_blur: 10px;
+    --_radius: 8px;
     position: relative;
-    width: 180px;
-    height: 260px;
+    width: 220px;
+    height: 300px;
     display: grid;
     grid-template-rows: min-content;
     gap: var(--_spacer);
@@ -32,7 +33,7 @@
     -webkit-backdrop-filter: blur(var(--_blur));
     border: 1px solid rgba(255, 255, 255, .2);
     box-shadow: 0 4px 6px (0, 0, 0, .5);
-    border-radius: 8px;
+    border-radius: var(--_radius);
     transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
@@ -44,20 +45,18 @@
 }
 
 .card_inner,
-.see_more_btn,
-.image_container {
+.see_more_btn {
     display: none;
 }
 
-.card_inner,
-.image_container {
+.card_inner {
     position: relative;
     opacity: 0;
+    font-size: .5rem;
 }
 
 .cover,
-.card_inner,
-.image_container {
+.card_inner {
     width: 100%;
     height: 100%;
     transition: opacity .5s ease, transform .5s ease;
@@ -69,22 +68,21 @@
 }
 
 .project_card:hover .see_more_btn {
-    display: block;
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: calc(100% - (2* var(--_spacer)));
+    width: 100%;
     padding: 10px 20px;
     background-color: rgba(11, 12, 16, .7);
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
     border: none;
     color: var(--primary-color);
+    font-size: .5rem;
     text-decoration: overline;
     text-align: center;
-    font-family: 'Satisfy', cursive;
     cursor: pointer;
     transition: opacity .5s ease, transform .5s ease;
 }
@@ -103,7 +101,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: .5rem;
     text-align: justify;
     padding-inline: .5rem;
     background-color: rgba(11, 12, 16, .7);
@@ -114,6 +111,13 @@
     position: absolute;
     top: 0;
     right: 5%;
+    cursor: pointer;
+}
+
+.close_project_img_btn {
+    position: absolute;
+    top: 5%;
+    right: 10%;
     cursor: pointer;
 }
 
@@ -130,9 +134,10 @@
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
     border: none;
     color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: .5rem;
     text-decoration: overline;
     text-align: center;
-    font-family: 'Satisfy', cursive;
     cursor: pointer;
     transition: opacity .5s ease, transform .5s ease;
 }
@@ -156,30 +161,78 @@
 
 .card_links a {
     font-size: .5rem;
-    font-family: 'Satisfy', cursive;
     color: var(--primary-color);
     text-decoration: overline;
 }
 
-.image_container {
-    --_blur: 10px;
-    width: 180px;
-    height: 260px;
+/* carousel */
+#carousel {
+    position: absolute;
+    z-index: 15;
+    width: inherit;
+    height: inherit;
+    padding: var(--_spacer);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(58, 46, 34, 0.8);
-    backdrop-filter: blur(var(--_blur));
-    -webkit-backdrop-filter: blur(var(--_blur));
-    border: 1px solid rgba(255, 255, 255, .2);
-    box-shadow: 0 4px 6px (0, 0, 0, .5);
-    border-radius: 8px;
-    transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
-.carousel_image {
-    width: 50%;
-    aspect-ratio: 1/2;
+#carousel img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#carousel img.active {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: var(--_spacer);
+    border-radius: var(--_radius);
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+.close_project_img_btn {
+    z-index: 16;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: .8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#carousel_nav {
+    position: absolute;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+    bottom: 3px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    width: 6px;
+    height: 6px;
 }
 
 /* if animation allowed */
@@ -203,8 +256,8 @@
     animation-play-state: paused;
 }
 
-/* @keyframes scroll {
+@keyframes scroll {
     to {
         transform: translate(calc(-50% - 0.5rem));
     }
-} */
+}
