@@ -1,7 +1,7 @@
 .scroller {
     --_spacer: 1rem;
     max-width: 90%;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     z-index: 11;
 }

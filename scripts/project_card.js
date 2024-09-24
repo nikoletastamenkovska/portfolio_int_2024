@@ -43,34 +43,38 @@ window.createProjectCard = function (projects) {
         carousel.append(closeProjectImagesBtn, carouselNavigation);
 
 
+        const imagesList = [];
+        const dots = [];
+
         // Create the carousel images
         project.images.forEach((image, index) => {
             const img = document.createElement('img');
             img.src = image;
             img.alt = `Project image ${index + 1}`;
             img.classList.add('carousel_image');
+            imagesList.push(img);
 
             // create dot el
             const dot = document.createElement('span');
             dot.classList.add('dot');
+            dots.push(dot);
 
-            if (index === 0) {
-                img.classList.add('active');
-                dot.classList.add('active');
-            }
             carousel.appendChild(img);
+            carouselNavigation.appendChild(dot);
 
             dot.addEventListener('click', () => {
-                // Remove 'active' from all images and dots
-                document.querySelectorAll('.carousel_image').forEach(img => img.classList.remove('active'));
-                document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+                imagesList.forEach(img => img.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
 
-                // Add 'active' to the clicked dot and its corresponding image
                 img.classList.add('active');
                 dot.classList.add('active');
             });
-            carouselNavigation.appendChild(dot);
         });
+
+        if (imagesList.length > 0) {
+            imagesList[0].classList.add('active');
+            dots[0].classList.add('active');
+        }
 
         const seeMoreBtn = document.createElement('button');
         seeMoreBtn.classList.add('see_more_btn');
@@ -94,6 +98,17 @@ window.createProjectCard = function (projects) {
         card.addEventListener("mouseover", () => {
             cover.classList.add("active");
             seeMoreBtn.style.display = "block";
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            carousel.style.display = 'none';
+            projectImagesBtn.style.display = 'block';
+            Array.from(cardInner.children).forEach(child => {
+                if (child != carousel) {
+                    child.style.display = 'flex';
+                    projectImagesBtn.style.display = "block";
+                }
+            });
         });
 
         card.addEventListener("mouseleave", () => {
