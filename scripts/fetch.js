@@ -6,7 +6,7 @@ fetch('/data/projects.json')
         return response.json();
     })
     .then(data => {
-        createProjectCard(data.projects);
+        createProjectData(data.projects);
     })
     .catch(error => {
         console.error('Working hard to figure out why?', error);

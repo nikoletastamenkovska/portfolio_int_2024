@@ -41,16 +41,17 @@ section {
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
     background-position: bottom center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/intro_bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/intro_bg.jpg");
 }
 
 /* Specific section backgrounds */
 .about {
-    background-image: url("/images/about_bg.webp");
+    background-image: url("/images/backgrounds/about_bg.webp");
 }
 
 .projects {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/projects_bg.jpg");
+    background-position: bottom;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/projects.jpg");
 }
 
 .projects h1 {
@@ -64,6 +65,6 @@ section {
 }
 
 .contact {
-    background-position: top center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/contact_bg.jpg");
+    background-position: center right;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/contact.webp");
 }

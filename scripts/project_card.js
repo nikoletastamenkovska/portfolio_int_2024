@@ -1,4 +1,4 @@
-window.createProjectCard = function (projects) {
+window.createProjectData = function (projects) {
     const container = document.getElementById('projects_list_container');
     projects.forEach(project => {
         // the card
