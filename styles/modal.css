@@ -73,6 +73,14 @@
     text-align: justify;
 }
 
+.expose_wrapper * {
+    font-size: .5rem;
+}
+
+.expose_wrapper p {
+    text-indent: 1rem;
+}
+
 .close_wrapper {
     width: 100%;
     display: flex;
