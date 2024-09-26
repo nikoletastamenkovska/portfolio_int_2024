@@ -1,4 +1,5 @@
 const sections = ['intro', 'about', 'projects', 'contact'];
+const navLinks = document.querySelectorAll('.navigation a');
 let currentIndex = 0;
 
 function showSection(index) {
@@ -8,6 +9,16 @@ function showSection(index) {
             section.classList.add('active');
         } else {
             section.classList.remove('active');
+        }
+    });
+
+    navLinks.forEach(link => {
+        const targetId = link.getAttribute('href').substring(1);
+
+        if (targetId === sections[index]) {
+            link.classList.add('active_link');
+        } else {
+            link.classList.remove('active_link');
         }
     });
 
@@ -26,15 +37,13 @@ document.getElementById('prev').addEventListener('click', () => {
     showSection(currentIndex);
 });
 
-document.querySelectorAll('.navigation a').forEach(link => {
+navLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
         const targetId = event.currentTarget.getAttribute('href').substring(1);
         const index = sections.indexOf(targetId);
         if (index !== -1) {
             currentIndex = index;
-            // add active class to link
-            // currentIndex.classList.add('active_link');
             showSection(currentIndex);
         }
     });
