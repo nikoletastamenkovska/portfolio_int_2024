@@ -10,7 +10,7 @@ window.createProjectData = function (projects) {
         cover.classList.add('cover');
         cover.style.backgroundImage = `url(${project.images[0]})`;
 
-        // the everything inside the card
+        // the inner content of the card
         const cardInner = document.createElement('div');
         cardInner.classList.add('card_inner');
         const projectImagesBtn = document.createElement('button');
@@ -42,7 +42,6 @@ window.createProjectData = function (projects) {
 
         carousel.append(closeProjectImagesBtn, carouselNavigation);
 
-
         const imagesList = [];
         const dots = [];
 
@@ -54,7 +53,7 @@ window.createProjectData = function (projects) {
             img.classList.add('carousel_image');
             imagesList.push(img);
 
-            // create dot el
+            // create dot element
             const dot = document.createElement('span');
             dot.classList.add('dot');
             dots.push(dot);
@@ -76,51 +75,9 @@ window.createProjectData = function (projects) {
             dots[0].classList.add('active');
         }
 
-        const seeMoreBtn = document.createElement('button');
-        seeMoreBtn.classList.add('see_more_btn');
-        seeMoreBtn.innerHTML = "See more";
-
-        const closeSeeMoreBtn = document.createElement('btn');
-        closeSeeMoreBtn.classList.add('close_see_more_btn');
-        closeSeeMoreBtn.innerHTML = `<span class="close">&times;</span>`;
-
-        cardInner.append(projectImagesBtn, closeSeeMoreBtn);
-        cover.appendChild(seeMoreBtn);
+        cardInner.append(projectImagesBtn);
         card.append(cover, cardInner, carousel);
         container.appendChild(card);
-
-
-        seeMoreBtn.addEventListener('click', () => {
-            card.classList.add('active');
-            seeMoreBtn.style.display = "none";
-        });
-
-        card.addEventListener("mouseover", () => {
-            cover.classList.add("active");
-            seeMoreBtn.style.display = "block";
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            carousel.style.display = 'none';
-            projectImagesBtn.style.display = 'block';
-            Array.from(cardInner.children).forEach(child => {
-                if (child != carousel) {
-                    child.style.display = 'flex';
-                    projectImagesBtn.style.display = "block";
-                }
-            });
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.classList.remove("active");
-            cover.classList.add("active");
-            seeMoreBtn.style.display = "none";
-        });
-
-        closeSeeMoreBtn.addEventListener('click', () => {
-            card.classList.remove('active');
-            seeMoreBtn.style.display = "block";
-        });
 
         closeProjectImagesBtn.addEventListener('click', () => {
             Array.from(cardInner.children).forEach(child => {
@@ -141,4 +98,4 @@ window.createProjectData = function (projects) {
             carousel.style.display = "flex";
         });
     });
-}
+};

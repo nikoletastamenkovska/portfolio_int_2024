@@ -28,24 +28,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(58, 46, 34, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(var(--_blur));
     -webkit-backdrop-filter: blur(var(--_blur));
     border: 1px solid rgba(255, 255, 255, .2);
     box-shadow: 0 4px 6px (0, 0, 0, .5);
     border-radius: var(--_radius);
+    cursor: pointer;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
 .cover {
     display: block;
-    opacity: 1;
+    opacity: .5;
     background-size: cover;
     background-position: center;
+    z-index: 1;
 }
 
-.card_inner,
-.see_more_btn {
+.card_inner {
     display: none;
 }
 
@@ -53,6 +54,7 @@
     position: relative;
     opacity: 0;
     font-size: .5rem;
+    z-index: 2;
 }
 
 .cover,
@@ -67,34 +69,14 @@
     transform: scale(1.09);
 }
 
-.project_card:hover .see_more_btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: rgba(11, 12, 16, .7);
-    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
-    border: none;
-    color: var(--primary-color);
-    font-size: .5rem;
-    text-decoration: overline;
-    text-align: center;
-    cursor: pointer;
-    transition: opacity .5s ease, transform .5s ease;
-}
-
-.project_card.active .cover {
+.project_card:hover .cover {
     display: none;
     opacity: 0;
 }
 
-.project_card.active .card_inner {
+.project_card:hover .card_inner {
     max-width: 100%;
-    max-height: fit-content;
+    max-height: 100%;
     position: relative;
     opacity: 1;
     display: flex;
@@ -105,13 +87,6 @@
     padding-inline: .5rem;
     background-color: rgba(11, 12, 16, .7);
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
-}
-
-.close_see_more_btn {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    cursor: pointer;
 }
 
 .close_project_img_btn {
