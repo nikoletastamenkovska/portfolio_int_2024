@@ -47,11 +47,9 @@
 }
 
 .card_inner {
+    /* position: relative; */
     display: none;
-}
-
-.card_inner {
-    position: relative;
+    visibility: hidden;
     opacity: 0;
     font-size: .5rem;
     z-index: 2;
@@ -75,63 +73,62 @@
 }
 
 .project_card:hover .card_inner {
+    visibility: visible;
     max-width: 100%;
     max-height: 100%;
-    position: relative;
+    /* position: relative; */
     opacity: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     text-align: justify;
-    padding-inline: .5rem;
     background-color: rgba(11, 12, 16, .7);
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
 }
 
-.close_project_img_btn {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    cursor: pointer;
-}
 
 .project_images_button {
+    /* align-self: center;
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    right: 0; */
     width: 100%;
-    padding: 10px 20px;
+    padding-block: 10px;
     background-color: rgba(11, 12, 16, .7);
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
     border: none;
     color: var(--primary-color);
-    color: var(--primary-color);
     font-size: .5rem;
     text-decoration: overline;
-    text-align: center;
     cursor: pointer;
     transition: opacity .5s ease, transform .5s ease;
 }
 
-.card_title {
-    position: absolute;
-    top: 5%;
-}
-
-.card_links {
-    position: absolute;
-    bottom: 15%;
-    width: 100%;
+.inner_card_content {
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    padding-inline: .5rem;
     align-items: center;
-    background-color: rgba(11, 12, 16, .7);
-    border: none;
+    flex-direction: column;
+    padding-inline: .5rem;
+}
+
+.inner_card_content>* {
+    padding-block: .5rem;
+}
+
+.inner_card_content .card_links {
+    width: 100%;
+    align-self: flex-end;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner_card_content .card_links>* {
+    width: 100%;
 }
 
 .card_links a {
@@ -142,14 +139,12 @@
 
 /* carousel */
 #carousel {
-    position: absolute;
+    position: relative;
     z-index: 15;
     width: inherit;
     height: inherit;
     padding: var(--_spacer);
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #carousel img {
@@ -169,10 +164,6 @@
     animation-duration: 1.5s;
 }
 
-.close_project_img_btn {
-    z-index: 16;
-}
-
 @keyframes fadeIn {
     from {
         opacity: .8
@@ -184,11 +175,13 @@
 }
 
 #carousel_nav {
-    position: absolute;
-    background-color: rgba(11, 12, 16, .7);
+    position: fixed;
+    background-color: rgba(225, 225, 225, .5);
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
-    bottom: 3px;
-    width: 100%;
+    bottom: var(--_spacer);
+    right: 50%;
+    transform: translate(50%);
+    width: calc(100% - 2 * var(--_spacer));
     display: flex;
     justify-content: center;
     z-index: 20;

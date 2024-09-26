@@ -1,16 +1,16 @@
 window.createProjectData = function (projects) {
     const container = document.getElementById('projects_list_container');
+    const scroller = document.querySelector('.scroller_inner');
+
     projects.forEach(project => {
         // the card
         const card = document.createElement('li');
         card.classList.add('project_card');
 
-        // the cover of the card
         const cover = document.createElement('div');
         cover.classList.add('cover');
         cover.style.backgroundImage = `url(${project.images[0]})`;
 
-        // the inner content of the card
         const cardInner = document.createElement('div');
         cardInner.classList.add('card_inner');
         const projectImagesBtn = document.createElement('button');
@@ -18,17 +18,18 @@ window.createProjectData = function (projects) {
         projectImagesBtn.textContent = 'Project Images';
 
         cardInner.innerHTML = `
-            <h3 class="card_title">${project.title}</h3>
-            <div class="card_description">${project.description}</div>
-            <div class="card_tech">Technologies: ${project.tech.join(', ')}</div>
-            <div class="card_links">
-            ${project.github ? `<a href="${project.github}" target="_blank">Check on GitHub</a>` : ''} 
-            ${project.gitlab ? `<a href="${project.gitlab}" target="_blank">Check on GitLab</a>` : ''}
-            ${project.deployed ? `<a href="${project.deployed}" target="_blank">Live Demo</a>` : ''}
+            <div class="inner_card_content">
+                <h3 class="card_title">${project.title}</h3>
+                <div class="card_description">${project.description}</div>
+                <div class="card_tech">Technologies: ${project.tech.join(', ')}</div>
+                <div class="card_links">
+                    ${project.github ? `<a href="${project.github}" target="_blank">Check on GitHub</a>` : ''} 
+                    ${project.gitlab ? `<a href="${project.gitlab}" target="_blank">Check on GitLab</a>` : ''}
+                    ${project.deployed ? `<a href="${project.deployed}" target="_blank">Live Demo</a>` : ''}
+                </div>
             </div>
         `;
 
-        // the carousel
         const carousel = document.createElement('div');
         carousel.id = 'carousel';
         carousel.style.display = 'none';
@@ -36,16 +37,10 @@ window.createProjectData = function (projects) {
         const carouselNavigation = document.createElement('div');
         carouselNavigation.id = 'carousel_nav';
 
-        const closeProjectImagesBtn = document.createElement('btn');
-        closeProjectImagesBtn.classList.add('close_project_img_btn');
-        closeProjectImagesBtn.innerHTML = `<span class="close">&times;</span>`;
-
-        carousel.append(closeProjectImagesBtn, carouselNavigation);
 
         const imagesList = [];
         const dots = [];
 
-        // Create the carousel images
         project.images.forEach((image, index) => {
             const img = document.createElement('img');
             img.src = image;
@@ -75,18 +70,35 @@ window.createProjectData = function (projects) {
             dots[0].classList.add('active');
         }
 
+        carousel.appendChild(carouselNavigation);
         cardInner.append(projectImagesBtn);
         card.append(cover, cardInner, carousel);
         container.appendChild(card);
 
-        closeProjectImagesBtn.addEventListener('click', () => {
+
+        card.addEventListener('mouseenter', () => {
+            const cardRect = card.getBoundingClientRect();
+            const scrollRect = scroller.getBoundingClientRect();
+
+            if (cardRect.right > scrollRect.right || cardRect.left < scrollRect.left) {
+                scroller.scrollBy({
+                    left: cardRect.left - scrollRect.left,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            carousel.style.display = "none";
             Array.from(cardInner.children).forEach(child => {
                 if (child != carousel) {
-                    child.style.display = "flex";
+                    if (child === projectImagesBtn) {
+                        child.style.display = 'block';
+                    } else {
+                        child.style.display = 'flex';
+                    }
                 }
-            });
-            carousel.style.display = "none";
-            projectImagesBtn.style.display = "block";
+            })
         });
 
         projectImagesBtn.addEventListener('click', () => {
@@ -96,6 +108,11 @@ window.createProjectData = function (projects) {
                 }
             });
             carousel.style.display = "flex";
+
+            imagesList.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            imagesList[0].classList.add('active');
+            dots[0].classList.add('active');
         });
     });
 };
