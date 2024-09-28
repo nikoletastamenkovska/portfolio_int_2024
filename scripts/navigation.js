@@ -2,6 +2,9 @@ const sections = ['intro', 'about', 'projects', 'contact'];
 const navLinks = document.querySelectorAll('.navigation a');
 let currentIndex = 0;
 
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
 function showSection(index) {
     sections.forEach((sectionId, i) => {
         const section = document.getElementById(sectionId);
@@ -25,14 +28,26 @@ function showSection(index) {
     const currentSectionId = sections[index];
     const track = musicTracks[currentSectionId];
     changeMusic(track);
+
+    if (index === 0) {
+        prevButton.disabled = true;
+    } else {
+        prevButton.disabled = false;;
+    }
+    if (index === sections.length - 1) {
+        nextButton.disabled = true;
+    } else {
+        nextButton.disabled = false;
+    }
 }
 
-document.getElementById('next').addEventListener('click', () => {
+
+nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % sections.length;
     showSection(currentIndex);
 });
 
-document.getElementById('prev').addEventListener('click', () => {
+prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + sections.length) % sections.length;
     showSection(currentIndex);
 });

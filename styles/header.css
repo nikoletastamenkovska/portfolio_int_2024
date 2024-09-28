@@ -80,3 +80,9 @@ nav button {
 nav button:hover {
     color: var(--background-color);
 }
+
+nav button:disabled {
+    visibility: hidden;
+    opacity: 0;
+    cursor: none;
+}

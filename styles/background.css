@@ -4,7 +4,6 @@ main {
     min-height: calc(100dvh - 43.6px - 35.71px);
 }
 
-/* Section styles */
 section {
     display: flex;
     justify-content: center;
@@ -17,7 +16,6 @@ section {
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
-/* Active section */
 .active {
     display: flex;
     opacity: 1;
@@ -25,7 +23,6 @@ section {
     position: relative;
 }
 
-/* Section-specific background styles */
 .intro,
 .about,
 .projects,
@@ -44,7 +41,6 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/intro_bg.jpg");
 }
 
-/* Specific section backgrounds */
 .about {
     background-image: url("/images/backgrounds/about_bg.webp");
 }

@@ -38,6 +38,5 @@ function generateBinaryImages(binaryString) {
     }).join('');
 }
 
-// Insert generated HTML into the page
 document.querySelector('#latitude').innerHTML = generateBinaryImages(latBinary);
 document.querySelector('#longitude').innerHTML = generateBinaryImages(lngBinary);
