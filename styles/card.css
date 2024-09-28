@@ -1,16 +1,21 @@
 .scroller {
-    --_spacer: 1rem;
     max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden;
     scroll-behavior: smooth;
     z-index: 11;
 }
 
 .scroller_inner {
+    --_spacer: 1rem;
     padding-block: var(--_spacer);
     width: max-content;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
     gap: var(--_spacer);
     transition: animation-play-state 0.5s ease;
 }
@@ -20,7 +25,7 @@
     --_radius: 8px;
     position: relative;
     width: 220px;
-    height: 300px;
+    aspect-ratio: 3/4;
     display: grid;
     grid-template-rows: min-content;
     gap: var(--_spacer);
@@ -34,7 +39,6 @@
     border: 1px solid rgba(255, 255, 255, .2);
     box-shadow: 0 4px 6px (0, 0, 0, .5);
     border-radius: var(--_radius);
-    cursor: pointer;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
@@ -47,7 +51,6 @@
 }
 
 .card_inner {
-    /* position: relative; */
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -76,7 +79,6 @@
     visibility: visible;
     max-width: 100%;
     max-height: 100%;
-    /* position: relative; */
     opacity: 1;
     display: flex;
     justify-content: space-between;
@@ -89,11 +91,6 @@
 
 
 .project_images_button {
-    /* align-self: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0; */
     width: 100%;
     padding-block: 10px;
     background-color: rgba(11, 12, 16, .7);
@@ -137,7 +134,6 @@
     text-decoration: overline;
 }
 
-/* carousel */
 #carousel {
     position: relative;
     z-index: 15;
@@ -217,7 +213,7 @@
 .scroller[data-animated="true"] .scroller_inner {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 50s linear infinite;
+    animation: scroll 35s linear infinite;
 }
 
 .scroller[data-animated="true"] .scroller_inner:hover {
@@ -225,7 +221,11 @@
 }
 
 @keyframes scroll {
+    from {
+        transform: translateX(20%);
+    }
+
     to {
-        transform: translate(calc(-50% - 0.5rem));
+        transform: translateX(-20%)
     }
 }
