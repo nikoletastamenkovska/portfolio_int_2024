@@ -1,0 +1,53 @@
+.contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    z-index: 19;
+}
+
+.empty_container {
+    flex-grow: 1;
+}
+
+.contact_container {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-block: 1rem;
+}
+
+
+.mail_container:hover,
+.social_networking>*:hover {
+    transition: color 1s ease;
+    color: var(--primary-color);
+}
+
+
+.social_networking {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
+.mail_container a {
+    display: inline-block;
+}
+
+.mail_container a,
+.social_networking a i {
+    transition: transform 1s ease;
+}
+
+.mail_container a:hover,
+.social_networking a i:hover {
+    transform: scale(1.2);
+}

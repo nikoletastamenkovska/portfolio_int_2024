@@ -61,6 +61,6 @@ section {
 }
 
 .contact {
-    background-position: center right;
+    background-position: right;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/contact.webp");
 }
