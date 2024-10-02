@@ -85,7 +85,6 @@ ul {
     }
 }
 
-/* 
 @media screen and (min-width: 1200px) {
 
     body,
@@ -97,6 +96,6 @@ ul {
     a,
     button,
     section {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
-} */
+}

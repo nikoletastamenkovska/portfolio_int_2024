@@ -111,6 +111,10 @@
     opacity: 1;
 }
 
+.expose_wrapper {
+    overflow-y: scroll;
+}
+
 .expose_wrapper div,
 .expose_wrapper hr {
     text-align: justify;
@@ -136,7 +140,7 @@
     }
 
     .expose_wrapper * {
-        font-size: .5rem;
+        font-size: .7rem;
     }
 }
 
@@ -146,22 +150,26 @@
     }
 
     .expose_wrapper * {
-        font-size: .5rem;
+        font-size: .8rem;
     }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .about_modal {
-        width: 50%;
+        width: 60%;
     }
 
     .expose_wrapper * {
-        font-size: .5rem;
+        font-size: .8rem;
     }
 }
 
 @media only screen and (min-width: 1025px) {
     .about_modal {
-        width: 40%;
+        width: 50%;
+    }
+
+    .expose_wrapper * {
+        font-size: 1rem;
     }
 }
