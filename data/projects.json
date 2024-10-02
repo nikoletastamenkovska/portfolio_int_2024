@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Weather App",
+      "description": "App for practicing: replicated a weather application, experimenting with free weather APIs and integrating them into the project.",
+      "tech": ["HTML", "CSS", "ReactJs"],
+      "images": [
+        "/images/project_img/weather_app/weather_app_01.png",
+        "/images/project_img/weather_app/weather_app_02.png"
+      ],
+      "github": "https://github.com/nikoletastamenkovska/weather_app.git",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 2,
+      "title": "Restaurant Finder",
+      "description": "Discover top restaurants based on your preferences with this app. Easily filter by cuisine, view restaurant details, and save your favorites for quick access. Ideal for finding the best dining options tailored to your taste.",
+      "tech": ["HTML", "CSS", "ReactJS"],
+      "images": [
+        "/images/project_img/restaurant_app/restaurant_01.png",
+        "/images/project_img/restaurant_app/restaurant_02.png",
+        "/images/project_img/restaurant_app/restaurant_03.png"
+      ],
+      "gitlab": "https://gitlab.com/stamenkovska-nikoleta/brainsterchallenges_nikoletastamenkovskastojmirovskafe9/-/tree/Challenge_18_React-4_Restaurant-app?ref_type=heads",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 3,
+      "title": "Portfolio",
+      "description": "My first portfolio, where I am trying ThreeJS.",
+      "tech": ["CSS", "JavaScript", "ThreeJS"],
+      "images": [
+        "/images/project_img/portfolio/portfolio_01.png",
+        "/images/project_img/portfolio/portfolio_02.png",
+        "/images/project_img/portfolio/portfolio_03.png"
+      ],
+      "github": "https://github.com/nikoletastamenkovska/portfolio/tree/developement_phase",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 4,
+      "title": "Street Artist",
+      "description": "SPA project where you as customer can find art pieces for buying. Also, this is a web space for every street artist, that will allow them to be able to track theit income, and to have a place on the web where they can showcase their masterpieces",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "images": [
+        "/images/project_img/street_artist/street_artist_01.png",
+        "/images/project_img/street_artist/street_artist_02.png",
+        "/images/project_img/street_artist/street_artist_03.png"
+      ],
+      "gitlab": "https://gitlab.com/stamenkovska-nikoleta/brainsterprojects_nikoletastamenkovskastojmirovskafe9/-/tree/project02/app",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": 5,
+      "title": "Infinity Travel",
+      "description": "A dynamic platform for a tourism agency that allows users to explore and book travel packages and effortlessly. Users can browse destinations with ease, view stunning visuals, and access detailed trip information, all within an interactive and visually engaging interface.",
+      "tech": ["Bootstrap", "Typescript", "NextJS"],
+      "images": [
+        "/images/project_img/infinity_travel/infinity_travel_01.png",
+        "/images/project_img/infinity_travel/infinity_travel_02.png",
+        "/images/project_img/infinity_travel/infinity_travel_03.png",
+        "/images/project_img/infinity_travel/infinity_travel_04.png"
+      ],
+      "gitlab": "https://gitlab.com/stamenkovska-nikoleta/brainsterprojects_nikoletastamenkovskastojmirovskafe9/-/tree/project03/infinity_travel/src?ref_type=heads",
+      "video": "https://www.youtube.com/watch?v=example",
+      "deployed": "https://infinity-travel-deployment-7oi4n7znm.vercel.app/"
+    },
+    {
+      "id": 6,
+      "title": "Breathe App",
+      "description": "Breathe.mk is a web app for reporting air pollution incidents. It enables users to easily notify authorities about pollution issues, helping to improve air quality and public health in cities. By facilitating community engagement and supporting local inspectors, Breathe.mk aims to create a cleaner, healthier environment. I am still working on it",
+      "tech": ["MUI", "Typescript", "ReactJS"],
+      "images": [
+        "/images/project_img/breathe.mk/breathe_mk_01.png",
+        "/images/project_img/breathe.mk/breathe_mk_02.png",
+        "/images/project_img/breathe.mk/breathe_mk_03.png",
+        "/images/project_img/breathe.mk/breathe_mk_04.png"
+      ],
+      "github": "https://github.com/nikoletastamenkovska/breathe_mk_sk/tree/development",
+      "video": "https://www.youtube.com/watch?v=example"
+    }
+  ]
+}

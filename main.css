@@ -1,0 +1,18 @@
+@import "/styles/normalize.css";
+@import "/styles/fonts.css";
+@import "/styles/background.css";
+@import "/styles/text.css";
+@import "/styles/header.css";
+@import "/styles/binary.css";
+@import "/styles/footer.css";
+@import "/styles/modal.css";
+@import "/styles/card.css";
+@import "/styles/contact.css";
+
+:root {
+    --background-color: #0b0c10;
+    --primary-color: #adff2f;
+    --secondary-color: #2c003e;
+    --tertiary-color: #c0c0c0;
+
+}

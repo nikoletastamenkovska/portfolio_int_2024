@@ -1,0 +1,231 @@
+.scroller {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    z-index: 11;
+}
+
+.scroller_inner {
+    --_spacer: 1rem;
+    padding-block: var(--_spacer);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: var(--_spacer);
+    transition: animation-play-state 0.5s ease;
+}
+
+.project_card {
+    --_blur: 10px;
+    --_radius: 8px;
+    position: relative;
+    width: 220px;
+    aspect-ratio: 3/4;
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(var(--_blur));
+    -webkit-backdrop-filter: blur(var(--_blur));
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 4px 6px (0, 0, 0, .5);
+    border-radius: var(--_radius);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.cover {
+    display: block;
+    opacity: .5;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.card_inner {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: .5rem;
+    z-index: 2;
+}
+
+.cover,
+.card_inner {
+    width: 100%;
+    height: 100%;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.project_card:hover {
+    box-shadow: 0 4px 6px (0, 0, 0, .8);
+    transform: scale(1.09);
+}
+
+.project_card:hover .cover {
+    display: none;
+    opacity: 0;
+}
+
+.project_card:hover .card_inner {
+    visibility: visible;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+}
+
+
+.project_images_button {
+    width: 100%;
+    padding-block: 10px;
+    background-color: rgba(11, 12, 16, .7);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+    border: none;
+    color: var(--primary-color);
+    font-size: .5rem;
+    text-decoration: overline;
+    cursor: pointer;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.inner_card_content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: .5rem;
+}
+
+.inner_card_content>* {
+    padding-block: .5rem;
+}
+
+.inner_card_content .card_links {
+    width: 100%;
+    align-self: flex-end;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner_card_content .card_links>* {
+    width: 100%;
+}
+
+.card_links a {
+    font-size: .5rem;
+    color: var(--primary-color);
+    text-decoration: overline;
+}
+
+#carousel {
+    position: relative;
+    z-index: 15;
+    width: inherit;
+    height: inherit;
+    padding: var(--_spacer);
+    display: flex;
+}
+
+#carousel img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#carousel img.active {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: var(--_spacer);
+    border-radius: var(--_radius);
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: .8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#carousel_nav {
+    position: fixed;
+    background-color: rgba(225, 225, 225, .5);
+    box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
+    bottom: var(--_spacer);
+    right: 50%;
+    transform: translate(50%);
+    width: calc(100% - 2 * var(--_spacer));
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    width: 6px;
+    height: 6px;
+}
+
+/* if animation allowed */
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            #ffffff 20%,
+            #ffffff 80%,
+            #ffffff 20%);
+    mask: linear-gradient(90deg, rgba(255, 255, 255, .7), #ffffff);
+}
+
+.scroller[data-animated="true"] .scroller_inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 35s linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller_inner:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(-20%)
+    }
+}

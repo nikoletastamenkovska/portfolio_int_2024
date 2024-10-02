@@ -1,0 +1,66 @@
+/* Main container */
+main {
+    min-height: calc(100vh - 43.6px - 35.71px);
+    min-height: calc(100dvh - 43.6px - 35.71px);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: transparent;
+    color: var(--tertiary-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.intro,
+.about,
+.projects,
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    background-position: bottom center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/intro_bg.jpg");
+}
+
+.about {
+    background-image: url("/images/backgrounds/about_bg.webp");
+}
+
+.projects {
+    background-position: bottom;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/projects.jpg");
+}
+
+.projects h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline;
+}
+
+.contact {
+    background-position: right;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/contact.webp");
+}

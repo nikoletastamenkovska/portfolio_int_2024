@@ -1,0 +1,101 @@
+body {
+    position: relative;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: var(--background-color);
+    color: var(--tertiary-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+button,
+section {
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+button {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 0.05rem;
+}
+
+ul {
+    list-style: none;
+    font-size: .8rem;
+}
+
+@media (max-width: 600px) {
+
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li,
+    a,
+    button,
+    section {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li,
+    a,
+    button,
+    section {
+        font-size: 1.5rem;
+    }
+}

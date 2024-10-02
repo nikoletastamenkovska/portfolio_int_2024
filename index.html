@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Halant&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8580703571.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <header>
+        <a href="https://github.com/nikoletastamenkovska/portfolio_int_2024.git" target="_blank" class="logo">TARS</a>
+            <div class="navigation">
+                <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </div>
+    </header>
+
+    <nav>
+        <button id="prev"><i class="fa-solid fa-angles-left fa-2xl"></i></button>
+        <button id="next"><i class="fa-solid fa-angles-right fa-2xl"></i></button>
+    </nav>
+
+    <main>
+        <section class="intro" id="intro">
+            <div id="latitude" class="binary latitude"></div>
+                <p class="intro_heading"><span class="emphasized">Hi! </span><span>I'm </span><span>Nikoleta.</span></p>
+                <p class="intro_description"><span>Combining my passion for </span> <span class="emphasized">code, </span><span class="emphasized">sci-fi, </span><span class="emphasized">nature </span> <span>and </span><span class="emphasized">stories.</span></p>
+                <p class="intro_description"><span>I'm a junior </span><span class="emphasized">front-end </span><span>developer, </span><span>focused on creating <span class="emphasized">functional </span><span class="emphasized">responsive </span>designs from <span class="emphasized">great</span> ideas.</span></p>
+            <div id="longitude" class="binary longitude"></div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="wrapper">
+                <span>Biochemistry</span>
+                <span>Code</span>
+                <span>Brainster</span>
+                <span>Familly</span>
+                <span>Science</span>
+                <span>Movies</span>
+                <span>Sci-fi</span>
+                <span>Music</span>
+                <span>Recycle</span>
+                <span>Stars</span>
+                <span>Stories</span>
+                <span>CS50</span>
+                <span>Forest</span>
+                <span>Puzzles</span>
+                <span>Seventeen</span>
+                <span>Interstellar</span>
+                <span>Languages</span>
+                <span>Energy</span>
+                <span>Ghibli</span>
+                <span>Winter</span>
+            </div>
+            <div class="wrapper_reverse">
+                <span>Agile</span>
+                <span>Scrum</span>
+                <span>Ajax</span>
+                <span>NextJS</span>
+                <span>ReactJS</span>
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+                <span>MUI</span>
+                <span>Bootstrap</span>
+                <span>SASS</span>
+                <span>CS50</span>
+                <span>CSS</span>
+                <span>HTML</span>
+                <span>ThreeJS</span>
+                <span>jQuery</span>
+                <span>GSAP</span>
+                <span>ReactJS</span>
+                <span>UX/UI</span>
+                <span>AXIOS</span>
+            </div>
+            <button id="about_modal_open_button">More about me</button>
+            <div id="about_modal" class="about_modal">
+                <div class="modal_content">
+                    <div class="close_wrapper">
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="expose_wrapper">
+                        <div>
+                                <p>
+                                    I'm a rational, drama-free person who prefers to keep personal matters private. While good at <span>JavaScript</span>, so far <span>ReactJS</span> has provided me with the most fulfilling experience. There's always an eagerness to discover more, learn more, and in the meantime, deepen my programming knowledge. Confident in navigating any JavaScript framework, transitioning to higher-level programming languages feels almost natural.
+                                </p>
+                                <p>
+                                    Daily <span>experimenting</span> is what I cherish the most. Problem solving? Sometimes everything falls into place at once, bringing a great sense of accomplishment. And sometimes, when help is needed I'm not afraid to ask.
+                                </p>
+                                <p>
+                                    While not a workaholic, working in <span>collaborative environments</span> where ideas are <span>shared</span> and <span>valued</span> is truly enjoyable. 
+                                </p>
+                                <p>
+                                    I'm <span>not a perfectionist</span> and I always get the <span>work done</span>.  Procrastination isn't tolerated, and thriving in <span>organized</span> spaces both hierarchically and time-managed is essential. 
+                                </p>
+                                <p>
+                                    My approach is one of <span>persistence</span> and <span>resilience</span>, valuing the process as much as the achievement itself.
+                                </p>
+                        </div>
+                        <hr>
+                        <div>
+                            Tech Stack: <br>
+                            HTML • CSS  • Bootstrap • SASS • MUI • JavaScript • jQuery • Ajax • TypeScript • ReactJS • NextJS • Git • ThreeJS • GSAP • UX/UI • Agile • Scrum • CS50
+                        </div>
+                        <hr>
+                        <div>
+                            Soft Skills: <br>
+                            Growth mindset • Consistency • Adaptability • Curiosity • Honesty • Creativity
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="scroller snaps_inline">
+                <ul class="scroller_inner" id="projects_list_container">
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="empty_container"></div>
+                <div class="contact_container">
+                    <div class="mail_container">
+                        <a href="mailto:nikoleta.stamenkovska@yahoo.com">Transmit Your Thoughts</a>
+                    </div>
+                    <div class="social_networking">
+                        <a href="https://www.linkedin.com/in/nikoleta-stamenkovska-8a1a1a72/" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i>
+                        </a>
+                        <a href="https://github.com/nikoletastamenkovska" target="_blank">
+                            <i class="fa-brands fa-github fa-2xl"></i>
+                        </a>
+                        <a href="https://gitlab.com/stamenkovska-nikoleta" target="_blank">
+                            <i class="fa-brands fa-gitlab fa-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <button id="playButton">Everything is better with music...</button>
+        <audio id="background_music" loop></audio>
+    </footer>
+
+    <script src="./scripts/fetch.js"></script>
+    <script src="./scripts/project_card.js"></script>
+    <script src="./scripts/scroller.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/audio.js"></script>
+    <script src="./scripts/random_position.js"></script>
+    <script src="./scripts/binary.js"></script>
+    <script src="./scripts/navigation.js"></script>
+    <script src="./scripts/word_animation.js"></script>
+</body>
+</html>

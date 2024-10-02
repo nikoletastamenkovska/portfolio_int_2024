@@ -1,0 +1,67 @@
+.binary {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.latitude {
+    top: 10vh;
+    top: 10dvh;
+}
+
+.longitude {
+    top: 85vh;
+    top: 85dvh;
+}
+
+.binary .item {
+    cursor: pointer;
+    transition: .5s;
+    opacity: 0;
+    padding: .1rem;
+}
+
+.binary .item:hover {
+    opacity: 1;
+    transform: translateZ(100px);
+}
+
+.binary .item:hover+* {
+    opacity: .6;
+    transform: translateZ(70px) rotateY(20deg);
+}
+
+.binary .item:hover+*+* {
+    opacity: .4;
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+.binary .item:hover+*+*+* {
+    opacity: .2;
+    transform: translateZ(10px) rotateY(50deg);
+}
+
+.binary .item:has(+ *:hover) {
+    opacity: .6;
+    transform: translateZ(70px) rotate(-20deg);
+}
+
+.binary .item:has(+*+ *:hover) {
+    opacity: .4;
+    transform: translateZ(30px) rotate(-10deg);
+}
+
+.binary .item:has(+*+*+ *:hover) {
+    opacity: .2;
+    transform: translateZ(10px) rotate(-5deg);
+}
+
+.binary .item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 35%;
+}
