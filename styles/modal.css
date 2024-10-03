@@ -73,14 +73,6 @@
     text-align: justify;
 }
 
-.expose_wrapper * {
-    font-size: .6rem;
-}
-
-.expose_wrapper p {
-    text-indent: 1rem;
-}
-
 .close_wrapper {
     width: 100%;
     display: flex;
@@ -88,7 +80,6 @@
     transform: rotate(0deg);
     opacity: 1;
 }
-
 
 .close {
     color: var(--primary-color);
@@ -111,24 +102,86 @@
     opacity: 1;
 }
 
-.expose_wrapper {
-    overflow-y: scroll;
+.accordion_wrapper {
+    padding: 0 20px;
 }
 
-.expose_wrapper div,
-.expose_wrapper hr {
+.accordion {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.accorion_heading {
+    display: flex;
+    align-items: center;
+}
+
+.accorion_heading h3 {
+    font-size: .9rem;
+    margin-right: 10px;
+}
+
+.accordion_wrapper * {
+    font-size: .7rem;
+}
+
+.accordion_content p {
+    text-align: justify;
+    text-indent: 1rem;
+}
+
+
+.accordion .accordion_content {
+    display: none;
+}
+
+.accordion_wrapper .accordion.active .accorion_heading {
+    color: var(--primary-color);
+}
+
+.accordion_wrapper .accordion.active .accorion_heading i {
+    transform: rotate(180deg);
+    transition: transform .2s .1s;
+}
+
+.accordion_wrapper .accordion.active .accordion_content {
+    display: block;
+    height: 40dvh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+
+    animation: animate .2s linear back;
+    line-height: 2;
+    transform-origin: top;
+}
+
+/* 
+.accordion_wrapper div,
+.accordion_wrapper hr {
     text-align: justify;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
-.expose_wrapper div {
+/* 
+.accordion_wrapper div {
     padding: 10px 0;
+} */
+
+.accordion_content span {
+    color: var(--primary-color);
 }
 
-.expose_wrapper span {
-    color: var(--primary-color);
+@keyframes animate {
+    0% {
+        transform: scaleY(0)
+    }
 }
 
 /* Base styles for mobile-first */
@@ -136,10 +189,9 @@
     .about_modal {
         margin-top: 10px;
         width: 90%;
-        height: 80%;
     }
 
-    .expose_wrapper * {
+    .accordion_wrapper * {
         font-size: .7rem;
     }
 }
@@ -149,7 +201,7 @@
         width: 60%;
     }
 
-    .expose_wrapper * {
+    .accordion_wrapper * {
         font-size: .8rem;
     }
 }
@@ -159,7 +211,7 @@
         width: 60%;
     }
 
-    .expose_wrapper * {
+    .accordion_wrapper * {
         font-size: .8rem;
     }
 }
@@ -169,7 +221,7 @@
         width: 50%;
     }
 
-    .expose_wrapper * {
+    .accordion_wrapper * {
         font-size: 1rem;
     }
 }
