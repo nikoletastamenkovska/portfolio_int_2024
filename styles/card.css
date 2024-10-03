@@ -54,7 +54,6 @@
     display: none;
     visibility: hidden;
     opacity: 0;
-    font-size: .5rem;
     z-index: 2;
 }
 
@@ -97,7 +96,6 @@
     box-shadow: 0 8px 20px rgba(192, 192, 192, 0.3);
     border: none;
     color: var(--primary-color);
-    font-size: .5rem;
     text-decoration: overline;
     cursor: pointer;
     transition: opacity .5s ease, transform .5s ease;
@@ -110,6 +108,11 @@
     align-items: center;
     flex-direction: column;
     padding-inline: .5rem;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
 .inner_card_content>* {
@@ -120,18 +123,16 @@
     width: 100%;
     align-self: flex-end;
     margin-top: auto;
-    display: flex;
-    justify-content: space-evenly;
 }
 
-.inner_card_content .card_links>* {
+.inner_card_content .card_links a {
+    display: block;
+    margin-bottom: .5rem;
     width: 100%;
 }
 
 .card_links a {
-    font-size: .5rem;
     color: var(--primary-color);
-    text-decoration: overline;
 }
 
 #carousel {
@@ -227,5 +228,29 @@
 
     to {
         transform: translateX(-20%)
+    }
+}
+
+@media (max-width: 600px) {
+    .project_card {
+        width: 250px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .project_card {
+        width: 270px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .project_card {
+        width: 290px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .project_card {
+        width: 320px;
     }
 }

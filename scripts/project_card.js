@@ -20,12 +20,12 @@ window.createProjectData = function (projects) {
             cardInner.innerHTML = `
             <div class="inner_card_content">
                 <h3 class="card_title">${project.title}</h3>
-                <div class="card_description">${project.description}</div>
-                <div class="card_tech">Technologies: ${project.tech.join(', ')}</div>
+                <p class="card_description">${project.description}</p>
+                <p class="card_tech">Technologies: ${project.tech.join(', ')}</p>
                 <div class="card_links">
-                    ${project.github ? `<a href="${project.github}" target="_blank">Check on GitHub</a>` : ''} 
-                    ${project.gitlab ? `<a href="${project.gitlab}" target="_blank">Check on GitLab</a>` : ''}
-                    ${project.deployed ? `<a href="${project.deployed}" target="_blank">Live Demo</a>` : ''}
+                    ${project.github ? `<a href="${project.github}" target="_blank">Check on GitHub <i class="fas fa-angle-right"></i> </a>` : ''} 
+                    ${project.gitlab ? `<a href="${project.gitlab}" target="_blank">Check on GitLab <i class="fas fa-angle-right"></i> </a>` : ''}
+                    ${project.deployed ? `<a href="${project.deployed}" target="_blank">Live Demo <i class="fas fa-angle-right"></i> </a>` : ''}
                 </div>
             </div>
         `;

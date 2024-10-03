@@ -148,7 +148,7 @@
 
 .accordion_wrapper .accordion.active .accordion_content {
     display: block;
-    height: 40dvh;
+    height: 40vh;
     overflow-y: scroll;
     box-sizing: border-box;
     padding-right: 15px;
@@ -159,20 +159,6 @@
     line-height: 2;
     transform-origin: top;
 }
-
-/* 
-.accordion_wrapper div,
-.accordion_wrapper hr {
-    text-align: justify;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* 
-.accordion_wrapper div {
-    padding: 10px 0;
-} */
 
 .accordion_content span {
     color: var(--primary-color);
