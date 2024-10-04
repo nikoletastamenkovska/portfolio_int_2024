@@ -23,6 +23,7 @@
     transition: .5s;
     opacity: 0;
     padding: .1rem;
+    width: 150px;
 }
 
 .binary .item:hover {
