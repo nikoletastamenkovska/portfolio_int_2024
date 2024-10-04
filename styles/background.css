@@ -64,3 +64,10 @@ section {
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("/images/backgrounds/contact.webp");
 }
+
+@media (max-width: 600px) {
+    .about {
+        background-position: bottom;
+        background-image: url("/images/backgrounds/about_bg.webp");
+    }
+}
