@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9;
+    z-index: 20;
 }
 
 header a {
@@ -39,14 +39,81 @@ header a:hover::after {
     color: var(--tertiary-color);
 }
 
-.navigation ul {
+.navigation,
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navigation ul li:not(:last-of-type) {
+.navigation .menu li:not(:last-of-type) {
     margin-right: .5rem;
+}
+
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: var(--tertiary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 12;
+    transition: .3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: var(--tertiary-color);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.hamburger::before {
+    top: -10px;
+    width: 25px;
+}
+
+.hamburger::after {
+    top: 10px;
+    width: 25px;
+}
+
+.toggle_menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 13;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle_menu {
+    display: none;
+}
+
+.navigation input:checked~.hamburger {
+    background: transparent;
+}
+
+.navigation input:checked~.hamburger::before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.navigation input:checked~.hamburger::after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.navigation input:checked~.menu {
+    right: 0;
 }
 
 .active_link {
@@ -84,4 +151,40 @@ nav button:disabled {
     visibility: hidden;
     opacity: 0;
     cursor: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .hamburger,
+    .toggle_menu {
+        display: block;
+    }
+
+    .header {
+        padding: .5rem 1rem;
+    }
+
+    .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -180px;
+        background-color: rgba(11, 12, 16, .6);
+        width: 180px;
+        height: 100%;
+        padding-top: 65px;
+        transition: right 1.5s ease;
+    }
+
+    .menu li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .menu li a {
+        padding: 30px;
+        font-size: 1.2rem;
+    }
 }

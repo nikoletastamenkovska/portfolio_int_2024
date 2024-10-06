@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TARS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Halant&family=Montserrat:wght@700&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Halant&family=Montserrat:wght@700&family=Satisfy&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/8580703571.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.css">
 </head>
+
 <body>
 
     <header>
         <a href="https://github.com/nikoletastamenkovska/portfolio_int_2024.git" target="_blank" class="logo">TARS</a>
-            <div class="navigation">
-                <ul>
+        <div class="navigation">
+
+            <input type="checkbox" class="toggle_menu">
+            <div class="hamburger"></div>
+
+            <ul class="menu">
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            </div>
+        </div>
     </header>
 
     <nav>
@@ -30,9 +37,14 @@
     <main>
         <section class="intro" id="intro">
             <div id="latitude" class="binary latitude"></div>
-                <p class="intro_heading"><span class="emphasized">Hi! </span><span>I'm </span><span>Nikoleta.</span></p>
-                <p class="intro_description"><span>Combining my passion for </span> <span class="emphasized">code, </span><span class="emphasized">sci-fi, </span><span class="emphasized">nature </span> <span>and </span><span class="emphasized">stories.</span></p>
-                <p class="intro_description"><span>I'm a junior </span><span class="emphasized">front-end </span><span>developer, </span><span>focused on creating <span class="emphasized">functional </span><span class="emphasized">responsive </span>designs from <span class="emphasized">great</span> ideas.</span></p>
+            <p class="intro_heading"><span class="emphasized">Hi! </span><span>I'm </span><span>Nikoleta.</span></p>
+            <p class="intro_description"><span>Combining my passion for </span> <span class="emphasized">code,
+                </span><span class="emphasized">sci-fi, </span><span class="emphasized">nature </span> <span>and
+                </span><span class="emphasized">stories.</span></p>
+            <p class="intro_description"><span>I'm a junior </span><span class="emphasized">front-end
+                </span><span>developer, </span><span>focused on creating <span class="emphasized">functional
+                    </span><span class="emphasized">responsive </span>designs from <span class="emphasized">great</span>
+                    ideas.</span></p>
             <div id="longitude" class="binary longitude"></div>
         </section>
 
@@ -91,23 +103,34 @@
                         <div class="accordion">
                             <div class="accorion_heading">
                                 <h3>Bio</h3>
-                            <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-angle-down"></i>
                             </div>
                             <div class="accordion_content">
                                 <p></p>
-                                    I'm a rational, drama-free person who prefers to keep personal matters private. While good at <span>JavaScript</span>, so far <span>ReactJS</span> has provided me with the most fulfilling experience. There's always an eagerness to discover more, learn more, and in the meantime, deepen my programming knowledge. Confident in navigating any JavaScript framework, transitioning to higher-level programming languages feels almost natural.
+                                I'm a rational, drama-free person who prefers to keep personal matters private. While
+                                good at <span>JavaScript</span>, so far <span>ReactJS</span> has provided me with the
+                                most fulfilling experience. There's always an eagerness to discover more, learn more,
+                                and in the meantime, deepen my programming knowledge. Confident in navigating any
+                                JavaScript framework, transitioning to higher-level programming languages feels almost
+                                natural.
                                 </p>
                                 <p>
-                                    Daily <span>experimenting</span> is what I cherish the most. Problem solving? Sometimes everything falls into place at once, bringing a great sense of accomplishment. And sometimes, when help is needed I'm not afraid to ask.
+                                    Daily <span>experimenting</span> is what I cherish the most. Problem solving?
+                                    Sometimes everything falls into place at once, bringing a great sense of
+                                    accomplishment. And sometimes, when help is needed I'm not afraid to ask.
                                 </p>
                                 <p>
-                                    While not a workaholic, working in <span>collaborative environments</span> where ideas are <span>shared</span> and <span>valued</span> is truly enjoyable. 
+                                    While not a workaholic, working in <span>collaborative environments</span> where
+                                    ideas are <span>shared</span> and <span>valued</span> is truly enjoyable.
                                 </p>
                                 <p>
-                                    I'm <span>not a perfectionist</span> and I always get the <span>work done</span>.  Procrastination isn't tolerated, and thriving in <span>organized</span> spaces both hierarchically and time-managed is essential. 
+                                    I'm <span>not a perfectionist</span> and I always get the <span>work done</span>.
+                                    Procrastination isn't tolerated, and thriving in <span>organized</span> spaces both
+                                    hierarchically and time-managed is essential.
                                 </p>
                                 <p>
-                                    My approach is one of <span>persistence</span> and <span>resilience</span>, valuing the process as much as the achievement itself.
+                                    My approach is one of <span>persistence</span> and <span>resilience</span>, valuing
+                                    the process as much as the achievement itself.
                                 </p>
                             </div>
                         </div>
@@ -117,7 +140,8 @@
                                 <i class="fas fa-angle-down"></i>
                             </div>
                             <div class="accordion_content">
-                                HTML • CSS  • Bootstrap • SASS • MUI • JavaScript • jQuery • Ajax • TypeScript • ReactJS • NextJS • Git • ThreeJS • GSAP • UX/UI • Agile • Scrum • CS50
+                                HTML • CSS • Bootstrap • SASS • MUI • JavaScript • jQuery • Ajax • TypeScript • ReactJS
+                                • NextJS • Git • ThreeJS • GSAP • UX/UI • Agile • Scrum • CS50
                             </div>
                         </div>
                         <div class="accordion">
@@ -180,4 +204,5 @@
     <script src="./scripts/navigation.js"></script>
     <script src="./scripts/word_animation.js"></script>
 </body>
+
 </html>
