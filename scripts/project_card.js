@@ -3,7 +3,7 @@ window.createProjectData = function (projects) {
     const scroller = document.querySelector('.scroller_inner');
 
     function createCards(projects) {
-        projects.forEach(project => {
+        projects.forEach((project, idx) => {
             const card = document.createElement('li');
             card.classList.add('project_card');
 
@@ -16,6 +16,7 @@ window.createProjectData = function (projects) {
             const projectImagesBtn = document.createElement('button');
             projectImagesBtn.classList.add('project_images_button');
             projectImagesBtn.textContent = 'Project Images';
+            projectImagesBtn.id = `project_images_button_${idx}`;
 
             cardInner.innerHTML = `
             <div class="inner_card_content">
