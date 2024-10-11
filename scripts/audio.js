@@ -1,8 +1,8 @@
 const musicTracks = {
-    intro: '/soundtracks/1.First_Step.m4a',
-    about: '/soundtracks/2.Cornfield_Chase.m4a',
-    projects: '/soundtracks/4.The_Wormhole.m4a',
-    contact: '/soundtracks/5.Murph.m4a',
+    intro: '/soundtracks/1.First_Step.mp3',
+    about: '/soundtracks/2.Cornfield_Chase.mp3',
+    projects: '/soundtracks/3.The_Wormhole.mp3',
+    contact: '/soundtracks/4.Murph.mp3',
 }
 
 const backgroundMusic = document.getElementById('background_music');
