@@ -12,7 +12,7 @@
 .intro_description span {
     opacity: 0;
     animation: reveal_word 2s ease-in-out forwards;
-    animation-delay: calc(var(--delay) * .5s);
+    animation-delay: calc(var(--delay) * .3s);
     transform-origin: top center;
 }
 
