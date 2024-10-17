@@ -232,18 +232,30 @@
 }
 
 @media (max-width: 600px) {
+    .scroller {
+        max-width: 75%;
+    }
+
     .project_card {
         width: 250px;
     }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
+    .scroller {
+        max-width: 85%;
+    }
+
     .project_card {
         width: 270px;
     }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
+    .scroller {
+        max-width: 85%;
+    }
+
     .project_card {
         width: 290px;
     }

@@ -144,7 +144,7 @@ nav button {
 }
 
 nav button:hover {
-    color: var(--background-color);
+    color: var(--primary-color);
 }
 
 nav button:disabled {
